@@ -1,0 +1,28 @@
+{
+	"format_version": "1.10.0",
+	"animation_controllers": {
+		"controller.animation.bridge_speedtest.execute_commands": {
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"execute_command_id_1": "query.skin_id == 1"
+						}
+					]
+				},
+				"execute_command_id_1": {
+					"transitions": [
+						{
+							"default": "query.skin_id != 1"
+						}
+					],
+					"on_entry": [
+						"/scoreboard players add @p killauratest 1",
+						"/execute @p ~ ~ ~ function modules/killaura/notifs",
+						"@s bridge:remove_command_id_1"
+					]
+				}
+			}
+		}
+	}
+}

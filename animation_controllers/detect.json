@@ -1,0 +1,1210 @@
+{
+	"format_version": "1.10.0",
+	"animation_controllers": {
+		"controller.animation.glide": {
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"glide": "query.is_gliding"
+						}
+					],
+					"on_entry": [
+						"/scoreboard players set @s detect_glide 0"
+					]
+				},
+				"glide": {
+					"transitions": [
+						{
+							"default": "!query.is_gliding"
+						}
+					],
+					"on_entry": [
+						"/scoreboard players set @s detect_glide 1"
+					]
+				}
+			}
+		},
+		"controller.animation.left": {
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"left": "variable.attack_time"
+						}
+					],
+					"on_entry": [
+						"/scoreboard players set @s detect_left 0"
+					]
+				},
+				"left": {
+					"transitions": [
+						{
+							"default": "!variable.attack_time"
+						}
+					],
+					"on_entry": [
+						"/scoreboard players set @s detect_left 1"
+					]
+				}
+			}
+		},
+		"controller.animation.sneak": {
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"sneak": "query.is_sneaking"
+						}
+					],
+					"on_entry": [
+						"/scoreboard players set @s detect_sneak 0",
+						"/scoreboard players set @s detect_dsneak 0"
+					]
+				},
+				"sneak": {
+					"transitions": [
+						{
+							"default": "!query.is_sneaking"
+						}
+					],
+					"on_entry": [
+						"/scoreboard players set @s detect_sneak 1",
+						"/function detect_dsneak"
+					]
+				}
+			}
+		},
+		"controller.animation.sprint": {
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"sprint": "query.is_sprinting"
+						}
+					],
+					"on_entry": [
+						"/scoreboard players set @s detect_sprint 0"
+					]
+				},
+				"sprint": {
+					"transitions": [
+						{
+							"default": "!query.is_sprinting"
+						}
+					],
+					"on_entry": [
+						"/scoreboard players set @s detect_sprint 1"
+					]
+				}
+			}
+		},
+		"controller.animation.ground": {
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"ground": "query.is_on_ground"
+						}
+					],
+					"on_entry": [
+						"/scoreboard players set @s detect_ground 0"
+					]
+				},
+				"ground": {
+					"transitions": [
+						{
+							"default": "!query.is_on_ground"
+						}
+					],
+					"on_entry": [
+						"/scoreboard players set @s detect_ground 1"
+					]
+				}
+			}
+		},
+		"controller.animation.helmet": {
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"noh": "!(query.has_armor_slot(0))"
+						},
+						{
+							"leatherh": "query.armor_texture_slot(0) == 0"
+						},
+						{
+							"chainh": "query.armor_texture_slot(0) == 1"
+						},
+						{
+							"ironh": "query.armor_texture_slot(0) == 2"
+						},
+						{
+							"diamondh": "query.armor_texture_slot(0) == 3"
+						},
+						{
+							"goldh": "query.armor_texture_slot(0) == 4"
+						},
+						{
+							"netheriteh": "query.armor_texture_slot(0) == 5"
+						}
+					]
+				},
+				"noh": {
+					"transitions": [
+						{
+							"leatherh": "query.armor_texture_slot(0) == 0"
+						},
+						{
+							"chainh": "query.armor_texture_slot(0) == 1"
+						},
+						{
+							"ironh": "query.armor_texture_slot(0) == 2"
+						},
+						{
+							"diamondh": "query.armor_texture_slot(0) == 3"
+						},
+						{
+							"goldh": "query.armor_texture_slot(0) == 4"
+						},
+						{
+							"netheriteh": "query.armor_texture_slot(0) == 5"
+						}
+					],
+					"on_entry": [
+						"/scoreboard players set @s detect_helmet 0"
+					]
+				},
+				"leatherh": {
+					"transitions": [
+						{
+							"noh": "!(query.has_armor_slot(0))"
+						},
+						{
+							"chainh": "query.armor_texture_slot(0) == 1"
+						},
+						{
+							"ironh": "query.armor_texture_slot(0) == 2"
+						},
+						{
+							"diamondh": "query.armor_texture_slot(0) == 3"
+						},
+						{
+							"goldh": "query.armor_texture_slot(0) == 4"
+						},
+						{
+							"netheriteh": "query.armor_texture_slot(0) == 5"
+						}
+					],
+					"on_entry": [
+						"/scoreboard players set @s detect_helmet 1"
+					]
+				},
+				"chainh": {
+					"transitions": [
+						{
+							"noh": "!(query.has_armor_slot(0))"
+						},
+						{
+							"leatherh": "query.armor_texture_slot(0) == 0"
+						},
+						{
+							"ironh": "query.armor_texture_slot(0) == 2"
+						},
+						{
+							"diamondh": "query.armor_texture_slot(0) == 3"
+						},
+						{
+							"goldh": "query.armor_texture_slot(0) == 4"
+						},
+						{
+							"netheriteh": "query.armor_texture_slot(0) == 5"
+						}
+					],
+					"on_entry": [
+						"/scoreboard players set @s detect_helmet 2"
+					]
+				},
+				"ironh": {
+					"transitions": [
+						{
+							"noh": "!(query.has_armor_slot(0))"
+						},
+						{
+							"leatherh": "query.armor_texture_slot(0) == 0"
+						},
+						{
+							"chainh": "query.armor_texture_slot(0) == 1"
+						},
+						{
+							"diamondh": "query.armor_texture_slot(0) == 3"
+						},
+						{
+							"goldh": "query.armor_texture_slot(0) == 4"
+						},
+						{
+							"netheriteh": "query.armor_texture_slot(0) == 5"
+						}
+					],
+					"on_entry": [
+						"/scoreboard players set @s detect_helmet 3"
+					]
+				},
+				"diamondh": {
+					"transitions": [
+						{
+							"noh": "!(query.has_armor_slot(0))"
+						},
+						{
+							"leatherh": "query.armor_texture_slot(0) == 0"
+						},
+						{
+							"chainh": "query.armor_texture_slot(0) == 1"
+						},
+						{
+							"ironh": "query.armor_texture_slot(0) == 2"
+						},
+						{
+							"goldh": "query.armor_texture_slot(0) == 4"
+						},
+						{
+							"netheriteh": "query.armor_texture_slot(0) == 5"
+						}
+					],
+					"on_entry": [
+						"/scoreboard players set @s detect_helmet 5"
+					]
+				},
+				"goldh": {
+					"transitions": [
+						{
+							"noh": "!(query.has_armor_slot(0))"
+						},
+						{
+							"leatherh": "query.armor_texture_slot(0) == 0"
+						},
+						{
+							"chainh": "query.armor_texture_slot(0) == 1"
+						},
+						{
+							"ironh": "query.armor_texture_slot(0) == 2"
+						},
+						{
+							"diamondh": "query.armor_texture_slot(0) == 3"
+						},
+						{
+							"netheriteh": "query.armor_texture_slot(0) == 5"
+						}
+					],
+					"on_entry": [
+						"/scoreboard players set @s detect_helmet 4"
+					]
+				},
+				"netheriteh": {
+					"transitions": [
+						{
+							"noh": "!(query.has_armor_slot(0))"
+						},
+						{
+							"leatherh": "query.armor_texture_slot(0) == 0"
+						},
+						{
+							"chainh": "query.armor_texture_slot(0) == 1"
+						},
+						{
+							"ironh": "query.armor_texture_slot(0) == 2"
+						},
+						{
+							"diamondh": "query.armor_texture_slot(0) == 3"
+						},
+						{
+							"goldh": "query.armor_texture_slot(0) == 4"
+						}
+					],
+					"on_entry": [
+						"/scoreboard players set @s detect_helmet 6"
+					]
+				}
+			}
+		},
+		"controller.animation.chest": {
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"noc": "!(query.has_armor_slot(1))"
+						},
+						{
+							"leatherc": "query.armor_texture_slot(1) == 0"
+						},
+						{
+							"chainc": "query.armor_texture_slot(1) == 1"
+						},
+						{
+							"ironc": "query.armor_texture_slot(1) == 2"
+						},
+						{
+							"diamondc": "query.armor_texture_slot(1) == 3"
+						},
+						{
+							"goldc": "query.armor_texture_slot(1) == 4"
+						},
+						{
+							"netheritec": "query.armor_texture_slot(1) == 5"
+						}
+					]
+				},
+				"noc": {
+					"transitions": [
+						{
+							"leatherc": "query.armor_texture_slot(1) == 0"
+						},
+						{
+							"chainc": "query.armor_texture_slot(1) == 1"
+						},
+						{
+							"ironc": "query.armor_texture_slot(1) == 2"
+						},
+						{
+							"diamondc": "query.armor_texture_slot(1) == 3"
+						},
+						{
+							"goldc": "query.armor_texture_slot(1) == 4"
+						},
+						{
+							"netheritec": "query.armor_texture_slot(1) == 5"
+						}
+					],
+					"on_entry": [
+						"/scoreboard players set @s detect_chest 0"
+					]
+				},
+				"leatherc": {
+					"transitions": [
+						{
+							"noc": "!(query.has_armor_slot(1))"
+						},
+						{
+							"chainc": "query.armor_texture_slot(1) == 1"
+						},
+						{
+							"ironc": "query.armor_texture_slot(1) == 2"
+						},
+						{
+							"diamondc": "query.armor_texture_slot(1) == 3"
+						},
+						{
+							"goldc": "query.armor_texture_slot(1) == 4"
+						},
+						{
+							"netheritec": "query.armor_texture_slot(1) == 5"
+						}
+					],
+					"on_entry": [
+						"/scoreboard players set @s detect_chest 1"
+					]
+				},
+				"chainc": {
+					"transitions": [
+						{
+							"noc": "!(query.has_armor_slot(1))"
+						},
+						{
+							"leatherc": "query.armor_texture_slot(1) == 0"
+						},
+						{
+							"ironc": "query.armor_texture_slot(1) == 2"
+						},
+						{
+							"diamondc": "query.armor_texture_slot(1) == 3"
+						},
+						{
+							"goldc": "query.armor_texture_slot(1) == 4"
+						},
+						{
+							"netheritec": "query.armor_texture_slot(1) == 5"
+						}
+					],
+					"on_entry": [
+						"/scoreboard players set @s detect_chest 2"
+					]
+				},
+				"ironc": {
+					"transitions": [
+						{
+							"noc": "!(query.has_armor_slot(1))"
+						},
+						{
+							"leatherc": "query.armor_texture_slot(1) == 0"
+						},
+						{
+							"chainc": "query.armor_texture_slot(1) == 1"
+						},
+						{
+							"diamondc": "query.armor_texture_slot(1) == 3"
+						},
+						{
+							"goldc": "query.armor_texture_slot(1) == 4"
+						},
+						{
+							"netheritec": "query.armor_texture_slot(1) == 5"
+						}
+					],
+					"on_entry": [
+						"/scoreboard players set @s detect_chest 3"
+					]
+				},
+				"diamondc": {
+					"transitions": [
+						{
+							"noc": "!(query.has_armor_slot(1))"
+						},
+						{
+							"leatherc": "query.armor_texture_slot(1) == 0"
+						},
+						{
+							"chainc": "query.armor_texture_slot(1) == 1"
+						},
+						{
+							"ironc": "query.armor_texture_slot(1) == 2"
+						},
+						{
+							"goldc": "query.armor_texture_slot(1) == 4"
+						},
+						{
+							"netheritec": "query.armor_texture_slot(1) == 5"
+						}
+					],
+					"on_entry": [
+						"/scoreboard players set @s detect_chest 5"
+					]
+				},
+				"goldc": {
+					"transitions": [
+						{
+							"noc": "!(query.has_armor_slot(1))"
+						},
+						{
+							"leatherc": "query.armor_texture_slot(1) == 0"
+						},
+						{
+							"chainc": "query.armor_texture_slot(1) == 1"
+						},
+						{
+							"ironc": "query.armor_texture_slot(1) == 2"
+						},
+						{
+							"diamondc": "query.armor_texture_slot(1) == 3"
+						},
+						{
+							"netheritec": "query.armor_texture_slot(1) == 5"
+						}
+					],
+					"on_entry": [
+						"/scoreboard players set @s detect_chest 4"
+					]
+				},
+				"netheritec": {
+					"transitions": [
+						{
+							"noc": "!(query.has_armor_slot(1))"
+						},
+						{
+							"leatherc": "query.armor_texture_slot(1) == 0"
+						},
+						{
+							"chainc": "query.armor_texture_slot(1) == 1"
+						},
+						{
+							"ironc": "query.armor_texture_slot(1) == 2"
+						},
+						{
+							"diamondc": "query.armor_texture_slot(1) == 3"
+						},
+						{
+							"goldc": "query.armor_texture_slot(1) == 4"
+						}
+					],
+					"on_entry": [
+						"/scoreboard players set @s detect_chest 6"
+					]
+				}
+			}
+		},
+		"controller.animation.leggings": {
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"nol": "!(query.has_armor_slot(2))"
+						},
+						{
+							"leatherl": "query.armor_texture_slot(2) == 0"
+						},
+						{
+							"chainl": "query.armor_texture_slot(2) == 1"
+						},
+						{
+							"ironl": "query.armor_texture_slot(2) == 2"
+						},
+						{
+							"diamondl": "query.armor_texture_slot(2) == 3"
+						},
+						{
+							"goldl": "query.armor_texture_slot(2) == 4"
+						},
+						{
+							"netheritel": "query.armor_texture_slot(2) == 5"
+						}
+					]
+				},
+				"nol": {
+					"transitions": [
+						{
+							"leatherl": "query.armor_texture_slot(2) == 0"
+						},
+						{
+							"chainl": "query.armor_texture_slot(2) == 1"
+						},
+						{
+							"ironl": "query.armor_texture_slot(2) == 2"
+						},
+						{
+							"diamondl": "query.armor_texture_slot(2) == 3"
+						},
+						{
+							"goldl": "query.armor_texture_slot(2) == 4"
+						},
+						{
+							"netheritel": "query.armor_texture_slot(2) == 5"
+						}
+					],
+					"on_entry": [
+						"/scoreboard players set @s detect_leggings 0"
+					]
+				},
+				"leatherl": {
+					"transitions": [
+						{
+							"nol": "!(query.has_armor_slot(2))"
+						},
+						{
+							"chainl": "query.armor_texture_slot(2) == 1"
+						},
+						{
+							"ironl": "query.armor_texture_slot(2) == 2"
+						},
+						{
+							"diamondl": "query.armor_texture_slot(2) == 3"
+						},
+						{
+							"goldl": "query.armor_texture_slot(2) == 4"
+						},
+						{
+							"netheritel": "query.armor_texture_slot(2) == 5"
+						}
+					],
+					"on_entry": [
+						"/scoreboard players set @s detect_leggings 1"
+					]
+				},
+				"chainl": {
+					"transitions": [
+						{
+							"nol": "!(query.has_armor_slot(2))"
+						},
+						{
+							"leatherl": "query.armor_texture_slot(2) == 0"
+						},
+						{
+							"ironl": "query.armor_texture_slot(2) == 2"
+						},
+						{
+							"diamondl": "query.armor_texture_slot(2) == 3"
+						},
+						{
+							"goldl": "query.armor_texture_slot(2) == 4"
+						},
+						{
+							"netheritel": "query.armor_texture_slot(2) == 5"
+						}
+					],
+					"on_entry": [
+						"/scoreboard players set @s detect_leggings 2"
+					]
+				},
+				"ironl": {
+					"transitions": [
+						{
+							"nol": "!(query.has_armor_slot(2))"
+						},
+						{
+							"leatherl": "query.armor_texture_slot(2) == 0"
+						},
+						{
+							"chainl": "query.armor_texture_slot(2) == 1"
+						},
+						{
+							"diamondl": "query.armor_texture_slot(2) == 3"
+						},
+						{
+							"goldl": "query.armor_texture_slot(2) == 4"
+						},
+						{
+							"netheritel": "query.armor_texture_slot(2) == 5"
+						}
+					],
+					"on_entry": [
+						"/scoreboard players set @s detect_leggings 3"
+					]
+				},
+				"diamondl": {
+					"transitions": [
+						{
+							"nol": "!(query.has_armor_slot(2))"
+						},
+						{
+							"leatherl": "query.armor_texture_slot(2) == 0"
+						},
+						{
+							"chainl": "query.armor_texture_slot(2) == 1"
+						},
+						{
+							"ironl": "query.armor_texture_slot(2) == 2"
+						},
+						{
+							"goldl": "query.armor_texture_slot(2) == 4"
+						},
+						{
+							"netheritel": "query.armor_texture_slot(2) == 5"
+						}
+					],
+					"on_entry": [
+						"/scoreboard players set @s detect_leggings 5"
+					]
+				},
+				"goldl": {
+					"transitions": [
+						{
+							"nol": "!(query.has_armor_slot(2))"
+						},
+						{
+							"leatherl": "query.armor_texture_slot(2) == 0"
+						},
+						{
+							"chainl": "query.armor_texture_slot(2) == 1"
+						},
+						{
+							"ironl": "query.armor_texture_slot(2) == 2"
+						},
+						{
+							"diamondl": "query.armor_texture_slot(2) == 3"
+						},
+						{
+							"netheritel": "query.armor_texture_slot(2) == 5"
+						}
+					],
+					"on_entry": [
+						"/scoreboard players set @s detect_leggings 4"
+					]
+				},
+				"netheritel": {
+					"transitions": [
+						{
+							"nol": "!(query.has_armor_slot(2))"
+						},
+						{
+							"leatherl": "query.armor_texture_slot(2) == 0"
+						},
+						{
+							"chainl": "query.armor_texture_slot(2) == 1"
+						},
+						{
+							"ironl": "query.armor_texture_slot(2) == 2"
+						},
+						{
+							"diamondl": "query.armor_texture_slot(2) == 3"
+						},
+						{
+							"goldel": "query.armor_texture_slot(2) == 4"
+						}
+					],
+					"on_entry": [
+						"/scoreboard players set @s detect_leggings 6"
+					]
+				}
+			}
+		},
+		"controller.animation.boots": {
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"nob": "!(query.has_armor_slot(3))"
+						},
+						{
+							"leatherb": "query.armor_texture_slot(3) == 0"
+						},
+						{
+							"chainb": "query.armor_texture_slot(3) == 1"
+						},
+						{
+							"ironb": "query.armor_texture_slot(3) == 2"
+						},
+						{
+							"diamondb": "query.armor_texture_slot(3) == 3"
+						},
+						{
+							"goldb": "query.armor_texture_slot(3) == 4"
+						},
+						{
+							"netheriteb": "query.armor_texture_slot(3) == 5"
+						}
+					]
+				},
+				"nob": {
+					"transitions": [
+						{
+							"leatherb": "query.armor_texture_slot(3) == 0"
+						},
+						{
+							"chainb": "query.armor_texture_slot(3) == 1"
+						},
+						{
+							"ironb": "query.armor_texture_slot(3) == 2"
+						},
+						{
+							"diamondb": "query.armor_texture_slot(3) == 3"
+						},
+						{
+							"goldb": "query.armor_texture_slot(3) == 4"
+						},
+						{
+							"netheriteb": "query.armor_texture_slot(3) == 5"
+						}
+					],
+					"on_entry": [
+						"/scoreboard players set @s detect_boots 0"
+					]
+				},
+				"leatherb": {
+					"transitions": [
+						{
+							"nob": "!(query.has_armor_slot(3))"
+						},
+						{
+							"chainb": "query.armor_texture_slot(3) == 1"
+						},
+						{
+							"ironb": "query.armor_texture_slot(3) == 2"
+						},
+						{
+							"diamondb": "query.armor_texture_slot(3) == 3"
+						},
+						{
+							"goldb": "query.armor_texture_slot(3) == 4"
+						},
+						{
+							"netheriteb": "query.armor_texture_slot(3) == 5"
+						}
+					],
+					"on_entry": [
+						"/scoreboard players set @s detect_boots 1"
+					]
+				},
+				"chainb": {
+					"transitions": [
+						{
+							"nob": "!(query.has_armor_slot(3))"
+						},
+						{
+							"leatherb": "query.armor_texture_slot(3) == 0"
+						},
+						{
+							"ironb": "query.armor_texture_slot(3) == 2"
+						},
+						{
+							"diamondb": "query.armor_texture_slot(3) == 3"
+						},
+						{
+							"goldb": "query.armor_texture_slot(3) == 4"
+						},
+						{
+							"netheriteb": "query.armor_texture_slot(3) == 5"
+						}
+					],
+					"on_entry": [
+						"/scoreboard players set @s detect_boots 2"
+					]
+				},
+				"ironb": {
+					"transitions": [
+						{
+							"nob": "!(query.has_armor_slot(3))"
+						},
+						{
+							"leatherb": "query.armor_texture_slot(3) == 0"
+						},
+						{
+							"chainb": "query.armor_texture_slot(3) == 1"
+						},
+						{
+							"diamondb": "query.armor_texture_slot(3) == 3"
+						},
+						{
+							"goldb": "query.armor_texture_slot(3) == 4"
+						},
+						{
+							"netheriteb": "query.armor_texture_slot(3) == 5"
+						}
+					],
+					"on_entry": [
+						"/scoreboard players set @s detect_boots 3"
+					]
+				},
+				"diamondb": {
+					"transitions": [
+						{
+							"nob": "!(query.has_armor_slot(3))"
+						},
+						{
+							"leatherb": "query.armor_texture_slot(3) == 0"
+						},
+						{
+							"chainb": "query.armor_texture_slot(3) == 1"
+						},
+						{
+							"ironb": "query.armor_texture_slot(3) == 2"
+						},
+						{
+							"goldb": "query.armor_texture_slot(3) == 4"
+						},
+						{
+							"netheriteb": "query.armor_texture_slot(3) == 5"
+						}
+					],
+					"on_entry": [
+						"/scoreboard players set @s detect_boots 5"
+					]
+				},
+				"goldb": {
+					"transitions": [
+						{
+							"nob": "!(query.has_armor_slot(3))"
+						},
+						{
+							"leatherb": "query.armor_texture_slot(3) == 0"
+						},
+						{
+							"chainb": "query.armor_texture_slot(3) == 1"
+						},
+						{
+							"ironb": "query.armor_texture_slot(3) == 2"
+						},
+						{
+							"diamondb": "query.armor_texture_slot(3) == 3"
+						},
+						{
+							"netheriteb": "query.armor_texture_slot(3) == 5"
+						}
+					],
+					"on_entry": [
+						"/scoreboard players set @s detect_boots 4"
+					]
+				},
+				"netheriteb": {
+					"transitions": [
+						{
+							"nob": "!(query.has_armor_slot(3))"
+						},
+						{
+							"leatherb": "query.armor_texture_slot(3) == 0"
+						},
+						{
+							"chainb": "query.armor_texture_slot(3) == 1"
+						},
+						{
+							"ironb": "query.armor_texture_slot(3) == 2"
+						},
+						{
+							"diamondb": "query.armor_texture_slot(3) == 3"
+						},
+						{
+							"goldb": "query.armor_texture_slot(3) == 4"
+						}
+					],
+					"on_entry": [
+						"/scoreboard players set @s detect_boots 6"
+					]
+				}
+			}
+		},
+		"controller.animation.levitate": {
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"levitate": "query.is_levitating"
+						}
+					],
+					"on_entry": [
+						"/scoreboard players set @s detect_levitate 0"
+					]
+				},
+				"levitate": {
+					"transitions": [
+						{
+							"default": "!query.is_levitating"
+						}
+					],
+					"on_entry": [
+						"/scoreboard players set @s detect_levitate 1"
+					]
+				}
+			}
+		},
+		"controller.animation.death": {
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"death": "!query.is_alive"
+						}
+					]
+				},
+				"death": {
+					"transitions": [
+						{
+							"default": "query.is_alive"
+						}
+					],
+					"on_entry": [
+						"/scoreboard players add @s deaths 1"
+					]
+				}
+			}
+		},
+		"controller.animation.kill": {
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"kill": "query.variant == 101"
+						}
+					],
+					"on_entry": [
+						"@s removekill"
+					]
+				},
+				"kill": {
+					"transitions": [
+						{
+							"default": "query.variant != 101"
+						}
+					],
+					"on_entry": [
+						"/scoreboard players add @s kills 1",
+						"@s removekill"
+					]
+				}
+			}
+		},
+		"controller.animation.move": {
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"move": "query.is_moving"
+						}
+					],
+					"on_entry": [
+						"/scoreboard players set @s detect_move 0"
+					]
+				},
+				"move": {
+					"transitions": [
+						{
+							"default": "!query.is_moving"
+						}
+					],
+					"on_entry": [
+						"/scoreboard players set @s detect_move 1"
+					]
+				}
+			}
+		},
+		"controller.animation.autototem": {
+			"states": {
+				"autototem": {
+					"transitions": [
+						{
+							"totem": "query.get_equipped_item_name('off_hand') == 'totem_of_undying'"
+						}
+					]
+				},
+				"totem": {
+					"on_entry": [
+						"/function autototem"
+					],
+					"transitions": [
+						{
+							"autototem": "query.get_equipped_item_name('off_hand') != 'totem_of_undying'"
+						}
+					]
+				}
+			}
+		},
+		"controller.animation.illegals": {
+			"states": {
+				"check_illegal": {
+					"transitions": [
+						{
+							"bedrock": "query.get_equipped_item_name == 'bedrock'"
+						},
+						{
+							"command_block": "query.get_equipped_item_name == 'command_block'"
+						},
+						{
+							"chain_command_block": "query.get_equipped_item_name == 'chain_command_block'"
+						},
+						{
+							"repeating_command_block": "query.get_equipped_item_name == 'repeating_command_block'"
+						},
+						{
+							"command_block_minecart": "query.get_equipped_item_name == 'command_block_minecart'"
+						},
+						{
+							"barrier": "query.get_equipped_item_name == 'barrier'"
+						},
+						{
+							"structure_block": "query.get_equipped_item_name == 'structure_block'"
+						},
+						{
+							"structure_void": "query.get_equipped_item_name == 'structure_void'"
+						},
+						{
+							"light_block": "query.get_equipped_item_name == 'light_block'"
+						}
+					]
+				},
+				"bedrock": {
+					"transitions": [
+						{
+							"check_illegal": "query.get_equipped_item_name != 'bedrock'"
+						}
+					],
+					"on_entry": [
+						"/clear @s[tag=!staff] bedrock",
+						"/scoreboard players add @s[tag=!staff] itemviolations 1",
+						"/execute @s[tag=!staff] ~ ~ ~ tellraw @a[tag=staff,tag=notifsOn] {\"rawtext\":[{\"text\":\"§l§9[§bPAC§9]§r \"},{\"selector\":\"@s\"},{\"text\":\" give themselves an item. (Bedrock) Violations: \"},{\"score\":{\"name\": \"@s\",\"objective\": \"itemviolations\"}}]}",
+						"/tellraw @s {\"rawtext\":[{\"text\":\"§l§9[§bPAC§9]§r You gave yourself an item. (Bedrock) Violations: \"},{\"score\":{\"name\": \"@s\",\"objective\": \"itemviolations\"}}]}"
+					]
+				},
+				"command_block": {
+					"transitions": [
+						{
+							"check_illegal": "query.get_equipped_item_name != 'command_block'"
+						}
+					],
+					"on_entry": [
+						"/clear @s[tag=!staff] command_block",
+						"/scoreboard players add @s[tag=!staff] itemviolations 1",
+						"/execute @s[tag=!staff] ~ ~ ~ tellraw @a[tag=staff,tag=notifsOn] {\"rawtext\":[{\"text\":\"§l§9[§bPAC§9]§r \"},{\"selector\":\"@s\"},{\"text\":\" give themselves an item. (Command Block) Violations: \"},{\"score\":{\"name\": \"@s\",\"objective\": \"itemviolations\"}}]}",
+						"/tellraw @s {\"rawtext\":[{\"text\":\"§l§9[§bPAC§9]§r You gave yourself an item. (Command Block) Violations: \"},{\"score\":{\"name\": \"@s\",\"objective\": \"itemviolations\"}}]}"
+					]
+				},
+				"chain_command_block": {
+					"transitions": [
+						{
+							"check_illegal": "query.get_equipped_item_name != 'chain_command_block'"
+						}
+					],
+					"on_entry": [
+						"/clear @s[tag=!staff] chain_command_block",
+						"/scoreboard players add @s[tag=!staff] itemviolations 1",
+						"/execute @s[tag=!staff] ~ ~ ~ tellraw @a[tag=staff,tag=notifsOn] {\"rawtext\":[{\"text\":\"§l§9[§bPAC§9]§r \"},{\"selector\":\"@s\"},{\"text\":\" give themselves an item. (Chain Command Block) Violations: \"},{\"score\":{\"name\": \"@s\",\"objective\": \"itemviolations\"}}]}",
+						"/tellraw @s {\"rawtext\":[{\"text\":\"§l§9[§bPAC§9]§r You gave yourself an item. (Chain Command Block) Violations: \"},{\"score\":{\"name\": \"@s\",\"objective\": \"itemviolations\"}}]}"
+					]
+				},
+				"repeating_command_block": {
+					"transitions": [
+						{
+							"check_illegal": "query.get_equipped_item_name != 'repeating_command_block'"
+						}
+					],
+					"on_entry": [
+						"/clear @s[tag=!staff] repeating_command_block",
+						"/scoreboard players add @s[tag=!staff] itemviolations 1",
+						"/execute @s[tag=!staff] ~ ~ ~ tellraw @a[tag=staff,tag=notifsOn] {\"rawtext\":[{\"text\":\"§l§9[§bPAC§9]§r \"},{\"selector\":\"@s\"},{\"text\":\" give themselves an item. (Repeating Command Block) Violations: \"},{\"score\":{\"name\": \"@s\",\"objective\": \"itemviolations\"}}]}",
+						"/tellraw @s {\"rawtext\":[{\"text\":\"§l§9[§bPAC§9]§r You gave yourself an item. (Repeating Command Block) Violations: \"},{\"score\":{\"name\": \"@s\",\"objective\": \"itemviolations\"}}]}"
+					]
+				},
+				"command_block_minecart": {
+					"transitions": [
+						{
+							"check_illegal": "query.get_equipped_item_name != 'command_block_minecart'"
+						}
+					],
+					"on_entry": [
+						"/clear @s[tag=!staff] command_block_minecart",
+						"/scoreboard players add @s[tag=!staff] itemviolations 1",
+						"/execute @s[tag=!staff] ~ ~ ~ tellraw @a[tag=staff,tag=notifsOn] {\"rawtext\":[{\"text\":\"§l§9[§bPAC§9]§r \"},{\"selector\":\"@s\"},{\"text\":\" give themselves an item. (Command Block Minecart) Violations: \"},{\"score\":{\"name\": \"@s\",\"objective\": \"itemviolations\"}}]}",
+						"/tellraw @s {\"rawtext\":[{\"text\":\"§l§9[§bPAC§9]§r You gave yourself an item. (Command Block Minecart) Violations: \"},{\"score\":{\"name\": \"@s\",\"objective\": \"itemviolations\"}}]}"
+					]
+				},
+				"barrier": {
+					"transitions": [
+						{
+							"check_illegal": "query.get_equipped_item_name != 'barrier'"
+						}
+					],
+					"on_entry": [
+						"/clear @s[tag=!staff] barrier",
+						"/scoreboard players add @s[tag=!staff] itemviolations 1",
+						"/execute @s[tag=!staff] ~ ~ ~ tellraw @a[tag=staff,tag=notifsOn] {\"rawtext\":[{\"text\":\"§l§9[§bPAC§9]§r \"},{\"selector\":\"@s\"},{\"text\":\" give themselves an item. (Barrier) Violations: \"},{\"score\":{\"name\": \"@s\",\"objective\": \"itemviolations\"}}]}",
+						"/tellraw @s {\"rawtext\":[{\"text\":\"§l§9[§bPAC§9]§r You gave yourself an item. (Barrier) Violations: \"},{\"score\":{\"name\": \"@s\",\"objective\": \"itemviolations\"}}]}"
+					]
+				},
+				"structure_block": {
+					"transitions": [
+						{
+							"check_illegal": "query.get_equipped_item_name != 'structure_block'"
+						}
+					],
+					"on_entry": [
+						"/clear @s[tag=!staff] structure_block",
+						"/scoreboard players add @s[tag=!staff] itemviolations 1",
+						"/execute @s[tag=!staff] ~ ~ ~ tellraw @a[tag=staff,tag=notifsOn] {\"rawtext\":[{\"text\":\"§l§9[§bPAC§9]§r \"},{\"selector\":\"@s\"},{\"text\":\" give themselves an item. (Structure Block) Violations: \"},{\"score\":{\"name\": \"@s\",\"objective\": \"itemviolations\"}}]}",
+						"/tellraw @s {\"rawtext\":[{\"text\":\"§l§9[§bPAC§9]§r You gave yourself an item. (Structure Block) Violations: \"},{\"score\":{\"name\": \"@s\",\"objective\": \"itemviolations\"}}]}"
+					]
+				},
+				"structure_void": {
+					"transitions": [
+						{
+							"check_illegal": "query.get_equipped_item_name != 'structure_void'"
+						}
+					],
+					"on_entry": [
+						"/clear @s[tag=!staff] structure_void",
+						"/scoreboard players add @s[tag=!staff] itemviolations 1",
+						"/execute @s[tag=!staff] ~ ~ ~ tellraw @a[tag=staff,tag=notifsOn] {\"rawtext\":[{\"text\":\"§l§9[§bPAC§9]§r \"},{\"selector\":\"@s\"},{\"text\":\" give themselves an item. (Structure Void) Violations: \"},{\"score\":{\"name\": \"@s\",\"objective\": \"itemviolations\"}}]}",
+						"/tellraw @s {\"rawtext\":[{\"text\":\"§l§9[§bPAC§9]§r You gave yourself an item. (Structure Void) Violations: \"},{\"score\":{\"name\": \"@s\",\"objective\": \"itemviolations\"}}]}"
+					]
+				},
+				"light_block": {
+					"transitions": [
+						{
+							"check_illegal": "query.get_equipped_item_name != 'light_block'"
+						}
+					],
+					"on_entry": [
+						"/clear @s[tag=!staff] light_block",
+						"/scoreboard players add @s[tag=!staff] itemviolations 1",
+						"/execute @s[tag=!staff] ~ ~ ~ tellraw @a[tag=staff,tag=notifsOn] {\"rawtext\":[{\"text\":\"§l§9[§bPAC§9]§r \"},{\"selector\":\"@s\"},{\"text\":\" give themselves an item. (Light Block) Violations: \"},{\"score\":{\"name\": \"@s\",\"objective\": \"itemviolations\"}}]}",
+						"/tellraw @s {\"rawtext\":[{\"text\":\"§l§9[§bPAC§9]§r You gave yourself an item. (Light Block) Violations: \"},{\"score\":{\"name\": \"@s\",\"objective\": \"itemviolations\"}}]}"
+					]
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,42 @@
+{
+	"format_version": "1.10.0",
+	"animations": {
+		"animation.start": {
+			"timeline": {
+				"0": [
+					"/scoreboard objectives add detect_init dummy",
+					"/scoreboard objectives add detect_left dummy",
+					"/scoreboard objectives add detect_right dummy",
+					"/scoreboard objectives add detect_jump dummy",
+					"/scoreboard objectives add detect_sneak dummy",
+					"/scoreboard objectives add detect_dsneak dummy",
+					"/scoreboard objectives add detect_dsneakSet dummy",
+					"/scoreboard objectives add detect_sneakTemp dummy",
+					"/scoreboard objectives add detect_rhx dummy",
+					"/scoreboard objectives add detect_helmet dummy",
+					"/scoreboard objectives add detect_chest dummy",
+					"/scoreboard objectives add detect_leggings dummy",
+					"/scoreboard objectives add detect_boots dummy",
+					"/scoreboard objectives add detect_ground dummy",
+					"/scoreboard objectives add detect_glide dummy",
+					"/scoreboard objectives add fly_timer dummy",
+					"/scoreboard objectives add detect_levitate dummy",
+					"/scoreboard objectives add killauratest dummy",
+					"/scoreboard objectives add auratest_timer dummy",
+					"/scoreboard objectives add flyviolations dummy",
+					"/scoreboard objectives add flagcooldown dummy",
+					"/scoreboard objectives add deaths dummy",
+					"/scoreboard objectives add speedtest_timer dummy",
+					"/scoreboard objectives add speedviolations dummy",
+					"/scoreboard objectives add inair dummy",
+					"/scoreboard objectives add gmcviolations dummy",
+					"/scoreboard objectives add itemviolations dummy",
+					"/scoreboard objectives add totemviolations dummy",
+					"/scoreboard objectives add jesus_timer dummy"
+				]
+			},
+			"animation_length": 1,
+			"loop": false
+		}
+	}
+}

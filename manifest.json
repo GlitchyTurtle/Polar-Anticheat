@@ -1,0 +1,29 @@
+{
+   "format_version":2,
+   "header":{
+      "name":"Polar Anti-Cheat",
+      "description":"An anti-cheat for minecraft bedrock edition, features include: Nofly, Nospeed, AntiNBT, Nokillaura, and more! Made by: GlitchyTurtle32",
+      "uuid":"d2d663fa-7a83-4881-b2b4-3539ce0eefd4",
+      "version":[
+         1,
+         0,
+         0
+      ],
+      "min_engine_version":[
+         1,
+         13,
+         0
+      ]
+   },
+   "modules":[
+      {
+         "type":"data",
+         "uuid":"382d211f-02e6-4b1b-9599-69b62c47b369",
+         "version":[
+            1,
+            0,
+            0
+         ]
+      }
+   ]
+}

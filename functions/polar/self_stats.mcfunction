@@ -1,0 +1,11 @@
+tellraw @s[tag=!staff] {"rawtext":[{"text":"§l§9[§bPAC§9]§r You cannot use this command as a non-staff."}]}
+tellraw @s[tag=staff] {"rawtext":[{"selector":"@s"},{"text":"'s §l§9[§bPAC§9]§r Stats"}]}
+tellraw @s[tag=staff] {"rawtext":[{"text":"Helmet: "},{"score":{"name": "@s","objective": "detect_helmet"}}]}
+tellraw @s[tag=staff] {"rawtext":[{"text":"Chestplate: "},{"score":{"name": "@s","objective": "detect_chestplate"}}]}
+tellraw @s[tag=staff] {"rawtext":[{"text":"Leggings: "},{"score":{"name": "@s","objective": "detect_leggings"}}]}
+tellraw @s[tag=staff] {"rawtext":[{"text":"Boots: "},{"score":{"name": "@s","objective": "boots"}}]}
+tellraw @s[tag=staff] {"rawtext":[{"text":"Sneaking: "},{"score":{"name": "@s","objective": "detect_sneak"}}]}
+tellraw @s[tag=staff] {"rawtext":[{"text":"Fly Flags: "},{"score":{"name": "@s","objective": "flyviolations"}}]}
+tellraw @s[tag=staff] {"rawtext":[{"text":"Killaura Flags: "},{"score":{"name": "@s","objective": "killauratest"}}]}
+tellraw @s[tag=staff] {"rawtext":[{"text":"Kills: "},{"score":{"name": "@s","objective": "kills"}}]}
+tellraw @s[tag=staff] {"rawtext":[{"text":"Deaths: "},{"score":{"name": "@s","objective": "deaths"}}]}
