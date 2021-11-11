@@ -32,7 +32,12 @@
 					"/scoreboard objectives add gmcviolations dummy",
 					"/scoreboard objectives add itemviolations dummy",
 					"/scoreboard objectives add totemviolations dummy",
-					"/scoreboard objectives add jesus_timer dummy"
+					"/scoreboard objectives add jesus_timer dummy",
+					"/scoreboard objectives add ench_helmet dummy",
+					"/scoreboard objectives add ench_chest dummy",
+					"/scoreboard objectives add ench_legs dummy",
+					"/scoreboard objectives add ench_boots dummy",
+					"/scoreboard objectives add kills dummy"
 				]
 			},
 			"animation_length": 1,

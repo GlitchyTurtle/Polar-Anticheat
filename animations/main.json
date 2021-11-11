@@ -3,13 +3,21 @@
 	"animations": {
 		"animation.main": {
 			"timeline": {
-				"0.0": [
+				"0": [
 					"/scoreboard players add @a detect_init 0",
 					"/execute @a[scores={detect_init=0}] ~~~ function detect_init",
-					"/scoreboard players add @a[scores={detect_sneakTemp=1..}] detect_sneakTemp -1"
+					"/scoreboard players add @a[scores={detect_sneakTemp=1..}] detect_sneakTemp -1",
+					"variable.helmet_ench = query.armor_material_slot(0) == 1;",
+					"variable.helmet_enchleather = query.armor_material_slot(0) == 3;",
+					"variable.chest_ench = query.armor_material_slot(1) == 1;",
+					"variable.chest_enchleather = query.armor_material_slot(1) == 3;",
+					"variable.legs_ench = query.armor_material_slot(2) == 1;",
+					"variable.legs_enchleather = query.armor_material_slot(2) == 3;",
+					"variable.boots_ench = query.armor_material_slot(3) == 1;",
+					"variable.boots_enchleather = query.armor_material_slot(3) == 3;"
 				]
 			},
-			"animation_length": 0.05,
+			"animation_length": 0.01,
 			"loop": true
 		}
 	}

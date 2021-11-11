@@ -25,6 +25,10 @@
 					"move",
 					"autototem",
 					"illegals",
+					"enchanth",
+					"enchantc",
+					"enchantl",
+					"enchantb",
 					"bridge_execute_commands"
 				]
 			},
@@ -46,6 +50,10 @@
 				"move": "controller.animation.move",
 				"autototem": "controller.animation.autototem",
 				"illegals": "controller.animation.illegals",
+				"enchanth": "controller.animation.enchanth",
+				"enchantc": "controller.animation.enchantc",
+				"enchantl": "controller.animation.enchantl",
+				"enchantb": "controller.animation.enchantb",
 				"bridge_execute_commands": "controller.animation.bridge_player.execute_commands"
 			}
 		},
