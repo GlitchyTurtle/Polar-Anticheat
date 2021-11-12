@@ -1,4 +1,4 @@
-#bridge-file-version: #85
+#bridge-file-version: #92
 execute @s ~ ~ ~ tellraw @p[tag=staff] {"rawtext":[{"text":"---------------------------------------------"}]}
 execute @s ~ ~ ~ tellraw @p[tag=staff] {"rawtext":[{"text":"§l"},{"selector":"@s"},{"text":"'s §l§9[§bPAC§9]§r Stats"}]}
 execute @s ~ ~ ~ tellraw @p[tag=staff] {"rawtext":[{"text":"---------------------------------------------"}]}
@@ -54,4 +54,6 @@ execute @s[scores={detect_boots=3}] ~ ~ ~ tellraw @p[tag=staff] {"rawtext":[{"te
 execute @s[scores={detect_boots=4}] ~ ~ ~ tellraw @p[tag=staff] {"rawtext":[{"text":"Boots: §6Gold"}]}
 execute @s[scores={detect_boots=5}] ~ ~ ~ tellraw @p[tag=staff] {"rawtext":[{"text":"Boots: §bDiamond"}]}
 execute @s[scores={detect_boots=6}] ~ ~ ~ tellraw @p[tag=staff] {"rawtext":[{"text":"Boots: §8Netherite"}]}
+execute @s ~ ~ ~ tellraw @p[tag=staff] {"rawtext":[{"text":"---------------------------------------------"}]}
+execute @s ~ ~ ~ tellraw @p[tag=staff] {"rawtext":[{"text":"§lTime played:§r "},{"score":{"name": "@s","objective": "timeplayeddy"}},{"text":":"},{"score":{"name": "@s","objective": "timeplayedhr"}},{"text":":"},{"score":{"name": "@s","objective": "timeplayedmin"}},{"text":":"},{"score":{"name": "@s","objective": "timeplayedsec"}},{"text":""}]}
 execute @s ~ ~ ~ tellraw @p[tag=staff] {"rawtext":[{"text":"---------------------------------------------"}]}

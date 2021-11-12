@@ -1,3 +1,4 @@
+#bridge-file-version: #29
 HIDE 
 #Anti-Creative for non-staff
 gamemode s @s[m=c,tag=!staff]

@@ -1,3 +1,4 @@
+#bridge-file-version: #22
 tag @s[tag=staff,tag=vanished] add unvanishtransfer
 tag @s[tag=staff,tag=!vanished] remove unvanished
 tag @s[tag=staff,tag=!vanished] add vanished

@@ -1,3 +1,4 @@
+#bridge-file-version: #8
 HIDE 
 gamerule sendcommandfeedback false
 gamemode a

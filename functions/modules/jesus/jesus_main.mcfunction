@@ -1,3 +1,4 @@
+#bridge-file-version: #7
 HIDE 
 tag @s remove onLiquid
 execute @s[tag=!jesusFlagsOff,m=!c] ~ ~ ~ detect ~ ~-1 ~ water 0 execute @s ~ ~ ~ detect ~1 ~-1 ~ water 0 execute @s ~ ~ ~ detect ~1 ~-1 ~1 water 0 execute @s ~ ~ ~ detect ~1 ~-1 ~-1 water 0 execute @s ~ ~ ~ detect ~-1 ~-1 ~ water 0 execute @s ~ ~ ~ detect ~-1 ~-1 ~1 water 0 execute @s ~ ~ ~ detect ~-1 ~-1 ~-1 water 0 execute @s ~ ~ ~ detect ~ ~-1 ~1 water 0 execute @s ~ ~ ~ detect ~ ~-1 ~-1 water 0 execute @s ~ ~ ~ detect ~ ~ ~ air 0 tag @s add onLiquid

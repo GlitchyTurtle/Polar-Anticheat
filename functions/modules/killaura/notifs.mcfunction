@@ -1,3 +1,4 @@
+#bridge-file-version: #31
 HIDE 
 #Notify Staff
 execute @s[scores={killauratest=1..5}] ~ ~ ~ tellraw @a[tag=staff,tag=notifsOn] {"rawtext":[{"text":"§l§9[§bPAC§9]§r "},{"selector":"@s"},{"text":" has failed the killaura test. Violations: "},{"score":{"name": "@s","objective": "killauratest"}}]}

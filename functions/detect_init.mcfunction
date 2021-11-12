@@ -1,3 +1,4 @@
+#bridge-file-version: #2
 HIDE 
 scoreboard players set @a[scores={detect_init=0}] detect_left 0
 scoreboard players set @a[scores={detect_init=0}] detect_sneak 0

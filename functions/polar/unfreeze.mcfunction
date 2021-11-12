@@ -1,3 +1,4 @@
+#bridge-file-version: #24
 tag @s remove freeze
 event entity @e[r=2] despawn_freeze
 effect @s clear

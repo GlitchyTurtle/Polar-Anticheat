@@ -1,4 +1,4 @@
-//bridge-file-version: #179
+//bridge-file-version: #194
 {
 	"format_version": "1.10.0",
 	"animation_controllers": {
@@ -164,7 +164,9 @@
 						}
 					],
 					"on_entry": [
-						"/scoreboard players add @s deaths 1"
+						"/scoreboard players add @s deaths 1",
+						"/function nonessential/deathparticle",
+						"/structure load gravestone ~ ~ ~"
 					]
 				}
 			}
@@ -189,7 +191,8 @@
 					],
 					"on_entry": [
 						"/scoreboard players add @s kills 1",
-						"@s removekill"
+						"@s removekill",
+						"/structure load pvpkillspot ~ ~ ~"
 					]
 				}
 			}
@@ -229,7 +232,7 @@
 				},
 				"totem": {
 					"on_entry": [
-						"/function autototem"
+						"/function modules/totem/autototem"
 					],
 					"transitions": [
 						{
@@ -280,9 +283,9 @@
 					],
 					"on_entry": [
 						"/clear @s[tag=!staff] bedrock",
-						"/scoreboard players add @s[tag=!staff] illegalitemviolations 1",
-						"/execute @s[tag=!staff] ~ ~ ~ tellraw @a[tag=staff,tag=notifsOn] {\"rawtext\":[{\"text\":\"§l§9[§bPAC§9]§r \"},{\"selector\":\"@s\"},{\"text\":\" give themselves an item. (Bedrock) Violations: \"},{\"score\":{\"name\": \"@s\",\"objective\": \"illegalitemviolations\"}}]}",
-						"/tellraw @s {\"rawtext\":[{\"text\":\"§l§9[§bPAC§9]§r You gave yourself an item. (Bedrock) Violations: \"},{\"score\":{\"name\": \"@s\",\"objective\": \"illegalitemviolations\"}}]}"
+						"/scoreboard players add @s[tag=!staff] itemviolations 1",
+						"/execute @s[tag=!staff] ~ ~ ~ tellraw @a[tag=staff,tag=notifsOn] {\"rawtext\":[{\"text\":\"§l§9[§bPAC§9]§r \"},{\"selector\":\"@s\"},{\"text\":\" give themselves an item. (Bedrock) Violations: \"},{\"score\":{\"name\": \"@s\",\"objective\": \"itemviolations\"}}]}",
+						"/tellraw @s[tag=!staff] {\"rawtext\":[{\"text\":\"§l§9[§bPAC§9]§r You gave yourself an item. (Bedrock) Violations: \"},{\"score\":{\"name\": \"@s\",\"objective\": \"itemviolations\"}}]}"
 					]
 				},
 				"command_block": {
@@ -293,9 +296,9 @@
 					],
 					"on_entry": [
 						"/clear @s[tag=!staff] command_block",
-						"/scoreboard players add @s[tag=!staff] illegalitemviolations 1",
-						"/execute @s[tag=!staff] ~ ~ ~ tellraw @a[tag=staff,tag=notifsOn] {\"rawtext\":[{\"text\":\"§l§9[§bPAC§9]§r \"},{\"selector\":\"@s\"},{\"text\":\" give themselves an item. (Command Block) Violations: \"},{\"score\":{\"name\": \"@s\",\"objective\": \"illegalitemviolations\"}}]}",
-						"/tellraw @s {\"rawtext\":[{\"text\":\"§l§9[§bPAC§9]§r You gave yourself an item. (Command Block) Violations: \"},{\"score\":{\"name\": \"@s\",\"objective\": \"illegalitemviolations\"}}]}"
+						"/scoreboard players add @s[tag=!staff] itemviolations 1",
+						"/execute @s[tag=!staff] ~ ~ ~ tellraw @a[tag=staff,tag=notifsOn] {\"rawtext\":[{\"text\":\"§l§9[§bPAC§9]§r \"},{\"selector\":\"@s\"},{\"text\":\" give themselves an item. (Command Block) Violations: \"},{\"score\":{\"name\": \"@s\",\"objective\": \"itemviolations\"}}]}",
+						"/tellraw @s[tag=!staff] {\"rawtext\":[{\"text\":\"§l§9[§bPAC§9]§r You gave yourself an item. (Command Block) Violations: \"},{\"score\":{\"name\": \"@s\",\"objective\": \"itemviolations\"}}]}"
 					]
 				},
 				"chain_command_block": {
@@ -306,9 +309,9 @@
 					],
 					"on_entry": [
 						"/clear @s[tag=!staff] chain_command_block",
-						"/scoreboard players add @s[tag=!staff] illegalitemviolations 1",
-						"/execute @s[tag=!staff] ~ ~ ~ tellraw @a[tag=staff,tag=notifsOn] {\"rawtext\":[{\"text\":\"§l§9[§bPAC§9]§r \"},{\"selector\":\"@s\"},{\"text\":\" give themselves an item. (Chain Command Block) Violations: \"},{\"score\":{\"name\": \"@s\",\"objective\": \"illegalitemviolations\"}}]}",
-						"/tellraw @s {\"rawtext\":[{\"text\":\"§l§9[§bPAC§9]§r You gave yourself an item. (Chain Command Block) Violations: \"},{\"score\":{\"name\": \"@s\",\"objective\": \"illegalitemviolations\"}}]}"
+						"/scoreboard players add @s[tag=!staff] itemviolations 1",
+						"/execute @s[tag=!staff] ~ ~ ~ tellraw @a[tag=staff,tag=notifsOn] {\"rawtext\":[{\"text\":\"§l§9[§bPAC§9]§r \"},{\"selector\":\"@s\"},{\"text\":\" give themselves an item. (Chain Command Block) Violations: \"},{\"score\":{\"name\": \"@s\",\"objective\": \"itemviolations\"}}]}",
+						"/tellraw @s[tag=!staff] {\"rawtext\":[{\"text\":\"§l§9[§bPAC§9]§r You gave yourself an item. (Chain Command Block) Violations: \"},{\"score\":{\"name\": \"@s\",\"objective\": \"itemviolations\"}}]}"
 					]
 				},
 				"repeating_command_block": {
@@ -319,9 +322,9 @@
 					],
 					"on_entry": [
 						"/clear @s[tag=!staff] repeating_command_block",
-						"/scoreboard players add @s[tag=!staff] illegalitemviolations 1",
-						"/execute @s[tag=!staff] ~ ~ ~ tellraw @a[tag=staff,tag=notifsOn] {\"rawtext\":[{\"text\":\"§l§9[§bPAC§9]§r \"},{\"selector\":\"@s\"},{\"text\":\" give themselves an item. (Repeating Command Block) Violations: \"},{\"score\":{\"name\": \"@s\",\"objective\": \"illegalitemviolations\"}}]}",
-						"/tellraw @s {\"rawtext\":[{\"text\":\"§l§9[§bPAC§9]§r You gave yourself an item. (Repeating Command Block) Violations: \"},{\"score\":{\"name\": \"@s\",\"objective\": \"illegalitemviolations\"}}]}"
+						"/scoreboard players add @s[tag=!staff] itemviolations 1",
+						"/execute @s[tag=!staff] ~ ~ ~ tellraw @a[tag=staff,tag=notifsOn] {\"rawtext\":[{\"text\":\"§l§9[§bPAC§9]§r \"},{\"selector\":\"@s\"},{\"text\":\" give themselves an item. (Repeating Command Block) Violations: \"},{\"score\":{\"name\": \"@s\",\"objective\": \"itemviolations\"}}]}",
+						"/tellraw @s[tag=!staff] {\"rawtext\":[{\"text\":\"§l§9[§bPAC§9]§r You gave yourself an item. (Repeating Command Block) Violations: \"},{\"score\":{\"name\": \"@s\",\"objective\": \"itemviolations\"}}]}"
 					]
 				},
 				"command_block_minecart": {
@@ -332,9 +335,9 @@
 					],
 					"on_entry": [
 						"/clear @s[tag=!staff] command_block_minecart",
-						"/scoreboard players add @s[tag=!staff] illegalitemviolations 1",
-						"/execute @s[tag=!staff] ~ ~ ~ tellraw @a[tag=staff,tag=notifsOn] {\"rawtext\":[{\"text\":\"§l§9[§bPAC§9]§r \"},{\"selector\":\"@s\"},{\"text\":\" give themselves an item. (Command Block Minecart) Violations: \"},{\"score\":{\"name\": \"@s\",\"objective\": \"illegalitemviolations\"}}]}",
-						"/tellraw @s {\"rawtext\":[{\"text\":\"§l§9[§bPAC§9]§r You gave yourself an item. (Command Block Minecart) Violations: \"},{\"score\":{\"name\": \"@s\",\"objective\": \"illegalitemviolations\"}}]}"
+						"/scoreboard players add @s[tag=!staff] itemviolations 1",
+						"/execute @s[tag=!staff] ~ ~ ~ tellraw @a[tag=staff,tag=notifsOn] {\"rawtext\":[{\"text\":\"§l§9[§bPAC§9]§r \"},{\"selector\":\"@s\"},{\"text\":\" give themselves an item. (Command Block Minecart) Violations: \"},{\"score\":{\"name\": \"@s\",\"objective\": \"itemviolations\"}}]}",
+						"/tellraw @s[tag=!staff] {\"rawtext\":[{\"text\":\"§l§9[§bPAC§9]§r You gave yourself an item. (Command Block Minecart) Violations: \"},{\"score\":{\"name\": \"@s\",\"objective\": \"itemviolations\"}}]}"
 					]
 				},
 				"barrier": {
@@ -345,9 +348,9 @@
 					],
 					"on_entry": [
 						"/clear @s[tag=!staff] barrier",
-						"/scoreboard players add @s[tag=!staff] illegalitemviolations 1",
-						"/execute @s[tag=!staff] ~ ~ ~ tellraw @a[tag=staff,tag=notifsOn] {\"rawtext\":[{\"text\":\"§l§9[§bPAC§9]§r \"},{\"selector\":\"@s\"},{\"text\":\" give themselves an item. (Barrier) Violations: \"},{\"score\":{\"name\": \"@s\",\"objective\": \"illegalitemviolations\"}}]}",
-						"/tellraw @s {\"rawtext\":[{\"text\":\"§l§9[§bPAC§9]§r You gave yourself an item. (Barrier) Violations: \"},{\"score\":{\"name\": \"@s\",\"objective\": \"illegalitemviolations\"}}]}"
+						"/scoreboard players add @s[tag=!staff] itemviolations 1",
+						"/execute @s[tag=!staff] ~ ~ ~ tellraw @a[tag=staff,tag=notifsOn] {\"rawtext\":[{\"text\":\"§l§9[§bPAC§9]§r \"},{\"selector\":\"@s\"},{\"text\":\" give themselves an item. (Barrier) Violations: \"},{\"score\":{\"name\": \"@s\",\"objective\": \"itemviolations\"}}]}",
+						"/tellraw @s[tag=!staff] {\"rawtext\":[{\"text\":\"§l§9[§bPAC§9]§r You gave yourself an item. (Barrier) Violations: \"},{\"score\":{\"name\": \"@s\",\"objective\": \"itemviolations\"}}]}"
 					]
 				},
 				"structure_block": {
@@ -358,9 +361,9 @@
 					],
 					"on_entry": [
 						"/clear @s[tag=!staff] structure_block",
-						"/scoreboard players add @s[tag=!staff] illegalitemviolations 1",
-						"/execute @s[tag=!staff] ~ ~ ~ tellraw @a[tag=staff,tag=notifsOn] {\"rawtext\":[{\"text\":\"§l§9[§bPAC§9]§r \"},{\"selector\":\"@s\"},{\"text\":\" give themselves an item. (Structure Block) Violations: \"},{\"score\":{\"name\": \"@s\",\"objective\": \"illegalitemviolations\"}}]}",
-						"/tellraw @s {\"rawtext\":[{\"text\":\"§l§9[§bPAC§9]§r You gave yourself an item. (Structure Block) Violations: \"},{\"score\":{\"name\": \"@s\",\"objective\": \"illegalitemviolations\"}}]}"
+						"/scoreboard players add @s[tag=!staff] itemviolations 1",
+						"/execute @s[tag=!staff] ~ ~ ~ tellraw @a[tag=staff,tag=notifsOn] {\"rawtext\":[{\"text\":\"§l§9[§bPAC§9]§r \"},{\"selector\":\"@s\"},{\"text\":\" give themselves an item. (Structure Block) Violations: \"},{\"score\":{\"name\": \"@s\",\"objective\": \"itemviolations\"}}]}",
+						"/tellraw @s[tag=!staff] {\"rawtext\":[{\"text\":\"§l§9[§bPAC§9]§r You gave yourself an item. (Structure Block) Violations: \"},{\"score\":{\"name\": \"@s\",\"objective\": \"itemviolations\"}}]}"
 					]
 				},
 				"structure_void": {
@@ -371,9 +374,9 @@
 					],
 					"on_entry": [
 						"/clear @s[tag=!staff] structure_void",
-						"/scoreboard players add @s[tag=!staff] illegalitemviolations 1",
-						"/execute @s[tag=!staff] ~ ~ ~ tellraw @a[tag=staff,tag=notifsOn] {\"rawtext\":[{\"text\":\"§l§9[§bPAC§9]§r \"},{\"selector\":\"@s\"},{\"text\":\" give themselves an item. (Structure Void) Violations: \"},{\"score\":{\"name\": \"@s\",\"objective\": \"illegalitemviolations\"}}]}",
-						"/tellraw @s {\"rawtext\":[{\"text\":\"§l§9[§bPAC§9]§r You gave yourself an item. (Structure Void) Violations: \"},{\"score\":{\"name\": \"@s\",\"objective\": \"illegalitemviolations\"}}]}"
+						"/scoreboard players add @s[tag=!staff] itemviolations 1",
+						"/execute @s[tag=!staff] ~ ~ ~ tellraw @a[tag=staff,tag=notifsOn] {\"rawtext\":[{\"text\":\"§l§9[§bPAC§9]§r \"},{\"selector\":\"@s\"},{\"text\":\" give themselves an item. (Structure Void) Violations: \"},{\"score\":{\"name\": \"@s\",\"objective\": \"itemviolations\"}}]}",
+						"/tellraw @s {\"rawtext\":[{\"text\":\"§l§9[§bPAC§9]§r You gave yourself an item. (Structure Void) Violations: \"},{\"score\":{\"name\": \"@s\",\"objective\": \"itemviolations\"}}]}"
 					]
 				},
 				"light_block": {
@@ -384,9 +387,9 @@
 					],
 					"on_entry": [
 						"/clear @s[tag=!staff] light_block",
-						"/scoreboard players add @s[tag=!staff] illegalitemviolations 1",
-						"/execute @s[tag=!staff] ~ ~ ~ tellraw @a[tag=staff,tag=notifsOn] {\"rawtext\":[{\"text\":\"§l§9[§bPAC§9]§r \"},{\"selector\":\"@s\"},{\"text\":\" give themselves an item. (Light Block) Violations: \"},{\"score\":{\"name\": \"@s\",\"objective\": \"illegalitemviolations\"}}]}",
-						"/tellraw @s {\"rawtext\":[{\"text\":\"§l§9[§bPAC§9]§r You gave yourself an item. (Light Block) Violations: \"},{\"score\":{\"name\": \"@s\",\"objective\": \"illegalitemviolations\"}}]}"
+						"/scoreboard players add @s[tag=!staff] itemviolations 1",
+						"/execute @s[tag=!staff] ~ ~ ~ tellraw @a[tag=staff,tag=notifsOn] {\"rawtext\":[{\"text\":\"§l§9[§bPAC§9]§r \"},{\"selector\":\"@s\"},{\"text\":\" give themselves an item. (Light Block) Violations: \"},{\"score\":{\"name\": \"@s\",\"objective\": \"itemviolations\"}}]}",
+						"/tellraw @s[tag=!staff] {\"rawtext\":[{\"text\":\"§l§9[§bPAC§9]§r You gave yourself an item. (Light Block) Violations: \"},{\"score\":{\"name\": \"@s\",\"objective\": \"itemviolations\"}}]}"
 					]
 				}
 			}

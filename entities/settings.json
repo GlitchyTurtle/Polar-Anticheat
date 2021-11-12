@@ -1,0 +1,59 @@
+//bridge-file-version: #105
+{
+	"format_version": "1.16.0",
+	"minecraft:entity": {
+		"description": {
+			"identifier": "polar:settings",
+			"is_spawnable": false,
+			"is_summonable": true,
+			"is_experimental": false
+		},
+		"component_groups": {
+			"despawn": {
+				"minecraft:instant_despawn": {
+					"remove_child_entities": false
+				}
+			}
+		},
+		"components": {
+			"minecraft:collision_box": {
+				"width": 0.6,
+				"height": 1.8
+			},
+			"minecraft:physics": {
+				"has_gravity": false
+			},
+			"minecraft:health": {
+				"value": 999,
+				"max": 999
+			},
+			"minecraft:type_family": {
+				"family": [
+					"freeze",
+					"player"
+				]
+			},
+			"minecraft:damage_sensor": {
+				"triggers": [
+					{
+						"deals_damage": false,
+						"cause": "all"
+					}
+				]
+			},
+			"minecraft:tick_world": {
+				"radius": 1,
+				"never_despawn": true
+			}
+		},
+		"events": {
+			"despawn": {
+				"add": {
+					"component_groups": [
+						"despawn"
+					]
+				}
+			}
+		}
+	}
+}

@@ -1,3 +1,4 @@
+#bridge-file-version: #23
 HIDE 
 execute @s[scores={detect_move=1}] ~ ~ ~ scoreboard players add @s totemviolations 1
 execute @s[scores={detect_move=1}] ~ ~ ~ replaceitem entity @s slot.weapon.offhand 0 air 1 0

@@ -1,0 +1,5 @@
+#bridge-file-version: #9
+HIDE 
+titleraw @s[scores={actionbar=1}] actionbar {"rawtext":[{"text":"§a[Kills: "},{"score":{"name": "@s","objective": "kills"}},{"text":"] §c[Deaths: "},{"score":{"name": "@s","objective": "deaths"}},{"text":"] §b[Time played: "},{"score":{"name": "@s","objective": "timeplayeddy"}},{"text":":"},{"score":{"name": "@s","objective": "timeplayedhr"}},{"text":":"},{"score":{"name": "@s","objective": "timeplayedmin"}},{"text":":"},{"score":{"name": "@s","objective": "timeplayedsec"}},{"text":"]"}]}
+titleraw @s[scores={actionbar=2}] actionbar {"rawtext":[{"text":"§b[Time played: "},{"score":{"name": "@s","objective": "timeplayeddy"}},{"text":":"},{"score":{"name": "@s","objective": "timeplayedhr"}},{"text":":"},{"score":{"name": "@s","objective": "timeplayedmin"}},{"text":":"},{"score":{"name": "@s","objective": "timeplayedsec"}},{"text":"]"}]}
+titleraw @s[scores={actionbar=3}] actionbar {"rawtext":[{"text":"§a[Kills: "},{"score":{"name": "@s","objective": "kills"}},{"text":"] §c[Deaths: "},{"score":{"name": "@s","objective": "deaths"}},{"text":"]"}]}

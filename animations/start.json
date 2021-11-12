@@ -1,3 +1,4 @@
+//bridge-file-version: #50
 {
 	"format_version": "1.10.0",
 	"animations": {
@@ -37,7 +38,15 @@
 					"/scoreboard objectives add ench_chest dummy",
 					"/scoreboard objectives add ench_legs dummy",
 					"/scoreboard objectives add ench_boots dummy",
-					"/scoreboard objectives add kills dummy"
+					"/scoreboard objectives add kills dummy",
+					"/scoreboard objectives add timeplayedtick dummy",
+					"/scoreboard objectives add timeplayedsec dummy",
+					"/scoreboard objectives add timeplayedmin dummy",
+					"/scoreboard objectives add timeplayedhr dummy",
+					"/scoreboard objectives add timeplayeddy dummy",
+					"/scoreboard objectives add death_particle dummy",
+					"/scoreboard objectives add actionbar dummy",
+					"/scoreboard objectives add armorviolations dummy"
 				]
 			},
 			"animation_length": 1,

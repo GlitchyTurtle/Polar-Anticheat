@@ -1,3 +1,4 @@
+#bridge-file-version: #36
 HIDE 
 #Summons the killaura detector entity every 4 min
 scoreboard players add @s[scores={auratest_timer=!5000..}] auratest_timer 1
