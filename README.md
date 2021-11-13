@@ -41,33 +41,6 @@ To vanish: ```/function polar/vanish```
 
 To view a players stats + logs right click the player or use: ```/function polar/nearest_player_stats```
 
-# Notes:
-
-When applying the pack to your world make sure it is at the top to make sure it works properly. It may break other packs that use animations for detection. 
-Want something added, send me a request on discord: **Glitch#8024**
-
-# Extra Commands.
-
-To receive anti-cheat alerts use this command: ```/tag @s add notifsOn```
-
-To freeze a player use: ```/execute <playername> ~~~ function polar/freeze```
-
-To unfreeze a player use: ```/execute <playername> ~~~ function polar/unfreeze```
-
-To vanish: ```/function polar/vanish```
-
-To turn off a players ability to hit other players and animals: ```/tag <playername> add Nerf```
-
-To view a players stats + logs right click the player or use: ```/function polar/nearest_player_stats```
-
-To ban a player, click on them with a barrier, or use: ```/tag <playername> add Ban```
-
-# Notes:
-
-When applying the pack to your world make sure it is at the top to make sure it works properly. It may break other packs that use animations for detection. 
-Want something added? Send me a request on discord: **Glitch#8024**
-
-
 # Full List of usable commands
 
 ```/function automod/on``` - turns on automod.<br />
