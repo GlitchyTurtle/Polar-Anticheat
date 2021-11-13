@@ -1,9 +1,9 @@
 # Polar Anticheat (Beta)
 An anti-cheat for minecraft bedrock edition, features include: Nofly, Nospeed, AntiNBT, Nokillaura, and more!
-Check out the Wiki for more info and customization! https://github.com/GlitchyTurtle/Polar-Anticheat/wiki
+Check out the Wiki for more info and customization! https://github.com/GlitchyTurtle/Polar-Anticheat/wiki/Polar-Anticheat-Home
 
 # Setup
-To install this anticheat to your realm/world you need to install the .mcpack and apply it to your world and it should be fully up and running!
+To install this anticheat to your realm/world you need to install the .mcpack and apply it to your world, then it should be fully up and running!
 It is still in the beta stage, so stuff is still being added to it, and this is by no means the finished version (it will have bugs) - if you want to help me in the making of Polar Anticheat,
 my discord is **Glitch#8024**.
 
