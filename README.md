@@ -29,6 +29,9 @@ Speed:<br />
 Killaura:<br />
 + Periodically checks for killaura with invis fake players<br />
 
+AntiNBT:<br />
++ Checks and removes enchanted armor if turned on.<br />
+
 # Extra Commands.
 
 To receive anticheat alerts use this command: ```/tag @s add notifsOn```
@@ -102,3 +105,4 @@ To view a players stats + logs right click the player or use: ```/function polar
 + This addon can detect many different player actions, including moving, gliding, left clicking, sprinting, sneaking, is on ground, levitatin, deaths, kills, what armor they are wearing, if their armor is enchanted, and a few smaller ones. You can use all of these for your own systems, like a system to only let people wearing enchanted diamond armor ender an area. The command for that system (just the chesplate) would be: ```/testfor @a[r=10,scores={detect_chest=5,ench_chest=1}]```
 + Its possible to create your own actionbar message with commands - if you want to use kills, deaths, or time played use this for reference: ```{"score":{"name": "@s","objective": "kills"}}``` ```{"score":{"name": "@s","objective": "deaths"}}``` ```{"score":{"name": "@s","objective": "timeplayeddy"}},{"text":":"},{"score":{"name": "@s","objective": "timeplayedhr"}},{"text":":"},{"score":{"name": "@s","objective": "timeplayedmin"}},{"text":":"},{"score":{"name": "@s","objective": "timeplayedsec"}}```
 + If you own a server with over 10,000 players, you can request a specific version from me on discord: **Glitch#8024** - I'll usually be happy to help customize!
++ Check out the Wiki for more info and customization! https://github.com/GlitchyTurtle/Polar-Anticheat/wiki/Polar-Anticheat-Home
