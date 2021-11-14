@@ -1,9 +1,8 @@
-#bridge-file-version: #29
+#bridge-file-version: #30
 HIDE 
 #Anti-Creative for non-staff
 gamemode s @s[m=c,tag=!staff]
 scoreboard players add @s gmcviolations 1
-kill @s
  
 #Notify Offender
 execute @s[tag=!staffstatus,scores={gmcviolations=1}] ~~~ tellraw @s {"rawtext":[{"text":"§l§9[§bPAC§9]§r You tried in creative mode as a non-staff. Violations: "},{"score":{"name": "@s","objective": "gmcviolations"}}]}

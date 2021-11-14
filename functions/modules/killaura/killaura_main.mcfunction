@@ -1,4 +1,4 @@
-#bridge-file-version: #36
+#bridge-file-version: #37
 HIDE 
 #Summons the killaura detector entity every 4 min
 scoreboard players add @s[scores={auratest_timer=!5000..}] auratest_timer 1
@@ -8,4 +8,4 @@ execute @s[scores={auratest_timer=..0}] ~ ~ ~ scoreboard players set @s auratest
  
 #Kicks repeat flags
 execute @s[scores={killauratest=1..}] ~ ~ ~ tag @s add killauraFlag
-execute @s[scores={killauratest=5..}] ~ ~ ~ tag @s[tag=autoMod] add Ban
+execute @s[scores={killauratest=2..}] ~ ~ ~ tag @s[tag=autoMod] add Ban

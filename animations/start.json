@@ -1,4 +1,4 @@
-//bridge-file-version: #50
+//bridge-file-version: #51
 {
 	"format_version": "1.10.0",
 	"animations": {
@@ -46,7 +46,8 @@
 					"/scoreboard objectives add timeplayeddy dummy",
 					"/scoreboard objectives add death_particle dummy",
 					"/scoreboard objectives add actionbar dummy",
-					"/scoreboard objectives add armorviolations dummy"
+					"/scoreboard objectives add armorviolations dummy",
+					"/scoreboard objectives add killstreak dummy"
 				]
 			},
 			"animation_length": 1,

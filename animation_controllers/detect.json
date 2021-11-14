@@ -1,4 +1,4 @@
-//bridge-file-version: #194
+//bridge-file-version: #198
 {
 	"format_version": "1.10.0",
 	"animation_controllers": {
@@ -166,7 +166,9 @@
 					"on_entry": [
 						"/scoreboard players add @s deaths 1",
 						"/function nonessential/deathparticle",
-						"/structure load gravestone ~ ~ ~"
+						"/structure load gravestone ~ ~ ~",
+						"/scoreboard players set @s killstreak 0",
+						"tellraw @a[tag=showkillstreaks] {\"rawtext\":[{\"selector\":\"@s\"},{\"text\":\" has lost their killstreak.\"}]}"
 					]
 				}
 			}
@@ -192,7 +194,9 @@
 					"on_entry": [
 						"/scoreboard players add @s kills 1",
 						"@s removekill",
-						"/structure load pvpkillspot ~ ~ ~"
+						"/structure load pvpkillspot ~ ~ ~",
+						"/scoreboard players add @s killstreak 1",
+						"/function nonessential/killstreak"
 					]
 				}
 			}

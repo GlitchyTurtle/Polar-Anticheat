@@ -1,4 +1,4 @@
-#bridge-file-version: #145
+#bridge-file-version: #152
 HIDE 
 #Modules
 execute @a[tag=!flyFlagsOff] ~ ~ ~ function modules/fly/fly_main
@@ -53,8 +53,13 @@ scoreboard players add @a timeplayedhr 0
 scoreboard players add @a timeplayeddy 0
 scoreboard players add @a actionbar 0
 scoreboard players add @a armorviolations 0
+scoreboard players add @a killstreak 0
  
 #Settings
 execute @a[c=1] ~ ~ ~ detect 0 0 0 bedrock 0 function summon_settings
 execute @e[type=polar:settings,tag=automod_enabled] ~ ~ ~ tag @a add autoMod
 execute @e[type=polar:settings,tag=automod_disabled] ~ ~ ~ tag @a remove autoMod
+execute @e[type=polar:settings,tag=killstreak_enabled] ~ ~ ~ tag @a add showkillstreaks
+execute @e[type=polar:settings,tag=killstreak_disabled] ~ ~ ~ tag @a remove showkillstreaks
+execute @e[type=polar:settings,tag=earmor_enabled] ~ ~ ~ tag @a remove armorBan
+execute @e[type=polar:settings,tag=earmor_disabled] ~ ~ ~ tag @a add armorBan
