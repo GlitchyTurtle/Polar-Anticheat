@@ -8,8 +8,6 @@ Check out the Wiki for more info and customization! https://github.com/GlitchyTu
 <div align="center">
   <img src="https://img.shields.io/github/downloads/glitchyturtle/Polar-Anticheat/total?color=53a8f1&label=Github%20Downloads"
 width="226" />
-    <img src="https://img.shields.io/github/repo-size/glitchyturtle/Polar-Anticheat"
-width="200" />
 </div>
 <div align="left">
 
