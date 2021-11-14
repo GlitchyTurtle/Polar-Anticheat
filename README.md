@@ -9,7 +9,7 @@ Check out the Wiki for more info and customization! https://github.com/GlitchyTu
   <img src="https://img.shields.io/github/downloads/glitchyturtle/Polar-Anticheat/total?color=53a8f1&label=Github%20Downloads"
 width="250" />
 </div>
-
+<div align="left">
 
 # Setup
 To install this anticheat to your realm/world you need to install the .mcpack and apply it to your world, then it should be fully up and running!
