@@ -7,10 +7,14 @@ Check out the Wiki for more info and customization! https://github.com/GlitchyTu
   <img src="https://static.wixstatic.com/media/8ffe73_1c3ca87e2ab2409cbc95b447e74d809d~mv2.png/v1/crop/x_1,y_0,w_499,h_500/fill/w_476,h_476,al_c,q_85,usm_0.66_1.00_0.01/pack_icon.webp" width="500" />
 <div align="center">
   <img src="https://img.shields.io/github/downloads/glitchyturtle/Polar-Anticheat/total?color=53a8f1&label=Github%20Downloads"
-width="250" />
+width="226" />
+    <img src="https://img.shields.io/github/repo-size/glitchyturtle/Polar-Anticheat"
+width="200" />
 </div>
 <div align="left">
 
+  https://img.shields.io/github/repo-size/glitchyturtle/Polar-Anticheat
+  
 # Setup
 To install this anticheat to your realm/world you need to install the .mcpack and apply it to your world, then it should be fully up and running!
 It is still in the beta stage, so stuff is still being added to it, and this is by no means the finished version (it will have bugs) - if you want to help me in the making of Polar Anticheat,
