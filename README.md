@@ -29,8 +29,11 @@ Speed:<br />
 Killaura:<br />
 + Periodically checks for killaura with invis fake players<br />
 
-AntiNBT:<br />
+NBT:<br />
 + Checks and removes enchanted armor if turned on.<br />
+
+Gamemode:<br />
++ Checks and automantically changes non-staff and non-gamemodeFlagsOff to survival if in creative.<br />
 
 # Extra Commands.
 
