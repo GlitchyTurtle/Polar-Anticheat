@@ -8,11 +8,6 @@ To install this anti-cheat to your realm/world you need to install the .mcpack a
 </div>
 <div align="center">
   <img src="https://static.wixstatic.com/media/8ffe73_1c3ca87e2ab2409cbc95b447e74d809d~mv2.png/v1/crop/x_1,y_0,w_499,h_500/fill/w_476,h_476,al_c,q_85,usm_0.66_1.00_0.01/pack_icon.webp" width="500" />
-<div align="center">
-  <img src="https://img.shields.io/github/downloads/glitchyturtle/Polar-Anticheat/total?color=53a8f1&label=Github%20Downloads"
-width="250" />
-</div>
-
 <div align="left">
 
 # Full List of usable commands
