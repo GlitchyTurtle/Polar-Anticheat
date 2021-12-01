@@ -52,21 +52,21 @@ To install this anti-cheat to your realm/world you need to install the .mcpack a
 
 ```/function toggle/killauraFlags_on``` - turns on the killaura module for that user. Default is on.<br />
 
-```/function nonessential/dp_flame``` - death particle is now a rising flame. Player specific, so execute at the player to use.<br />
+```/function other/dp_flame``` - death particle is now a rising flame. Player specific, so execute at the player to use.<br />
 
-```/function nonessential/dp_poof``` - death particle is now a puff of smoke. Player specific, so execute at the player to use.<br />
+```/function other/dp_poof``` - death particle is now a puff of smoke. Player specific, so execute at the player to use.<br />
 
-```/function nonessential/dp_explosion``` - death particle is now a small explosion. Player specific, so execute at the player to use.<br />
+```/function other/dp_explosion``` - death particle is now a small explosion. Player specific, so execute at the player to use.<br />
 
-```/function nonessential/dp_blank``` - death particle is now empty. Player specific, so execute at the player to use.<br />
+```/function other/dp_blank``` - death particle is now empty. Player specific, so execute at the player to use.<br />
 
-```/function nonessential/actionbar_dk``` - shows deaths and kills over Hotbar. Player specific, so execute at the player to use.<br />
+```/function other/actionbar_dk``` - shows deaths and kills over Hotbar. Player specific, so execute at the player to use.<br />
 
-```/function nonessential/actionbar_dktp``` - shows deaths, kills, and time played over hotbar. Player specific, so execute at the player to use.<br />
+```/function other/actionbar_dktp``` - shows deaths, kills, and time played over hotbar. Player specific, so execute at the player to use.<br />
 
-```/function nonessential/actionbar_tp``` - shows time played over hotbar. Player specific, so execute at the player to use.<br />
+```/function other/actionbar_tp``` - shows time played over hotbar. Player specific, so execute at the player to use.<br />
 
-```/function nonessential/actionbar_none``` - shows nothing over hotbar. Player specific, so execute at the player to use.<br />
+```/function other/actionbar_none``` - shows nothing over hotbar. Player specific, so execute at the player to use.<br />
 
 ```/function global_toggle/killstreaks_on``` - turns on a system that shows a message in chat when someone gains a killstreak, or dies and loses the killstreak. Global setting, so it will be either on or off for every single player, and will affect players who have yet to join, or are offline currently. Deafult off.<br />
 
