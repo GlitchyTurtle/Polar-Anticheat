@@ -1,11 +1,15 @@
-#bridge-file-version: #152
+#bridge-file-version: #158
 HIDE 
+#Anti-Disabler
+gamerule randomtickspeed 1
+ 
 #Modules
-execute @a[tag=!flyFlagsOff] ~ ~ ~ function modules/fly/fly_main
+execute @a[m=!c,tag=!flyFlagsOff] ~ ~ ~ function modules/fly/fly_main
 execute @a[tag=!killauraFlagsOff] ~ ~ ~ function modules/killaura/killaura_main
-execute @a[tag=!speedFlagsOff] ~ ~ ~ function modules/speed/speedtest_main
+execute @a[m=!c,tag=!speedFlagsOff] ~ ~ ~ function modules/speed/speedtest_main
 execute @a[tag=!itembanFlagsOff] ~ ~ ~ function modules/itemban/itemban_main
-execute @a[tag=!jesusFlagsOff] ~ ~ ~ function modules/jesus/jesus_main
+execute @a[m=!c,tag=!jesusFlagsOff] ~ ~ ~ function modules/jesus/jesus_main
+execute @a[tag=!nbtFlags_off] ~ ~ ~ function modules/nbt/other_nbt
  
 #Other
 execute @a[m=c,tag=!staff,tag=!gamemodeFlagsOff] ~ ~ ~ function modules/other/antigmc

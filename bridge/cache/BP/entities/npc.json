@@ -1,0 +1,991 @@
+{
+	"file_path": "C:\\Users\\gross\\AppData\\Local\\Packages\\Microsoft.MinecraftUWP_8wekyb3d8bbwe\\LocalState\\games\\com.mojang\\development_behavior_packs\\Polar Anti-Cheat\\entities\\npc.json",
+	"file_type": "entity",
+	"format_version": 1,
+	"file_uuid": "d584d807_b43a_4bc5_ae84_ec73ef9c8e24",
+	"file_version": 1,
+	"cache_content": {
+		"children": [
+			{
+				"data": "1.13.0",
+				"key": "format_version"
+			},
+			{
+				"open": {
+					"format_version": "1.13.0",
+					"minecraft:entity": {
+						"description": {
+							"identifier": "minecraft:npc",
+							"is_spawnable": true,
+							"is_summonable": true,
+							"is_experimental": false
+						},
+						"components": {
+							"minecraft:damage_sensor": {
+								"triggers": {
+									"cause": "all",
+									"deals_damage": false
+								}
+							},
+							"minecraft:type_family": {
+								"family": [
+									"npc",
+									"mob"
+								]
+							},
+							"minecraft:fire_immune": true,
+							"minecraft:movement": {
+								"value": 0.5
+							},
+							"minecraft:loot": {
+								"table": "loot_tables/empty.json"
+							},
+							"minecraft:collision_box": {
+								"width": 0.6,
+								"height": 2.1
+							},
+							"minecraft:behavior.look_at_player": {
+								"priority": 0,
+								"look_distance": 6,
+								"probability": 0.02
+							},
+							"minecraft:persistent": {},
+							"minecraft:npc": {
+								"npc_data": {
+									"portrait_offsets": {
+										"translate": [
+											-7,
+											50,
+											0
+										],
+										"scale": [
+											1.75,
+											1.75,
+											1.75
+										]
+									},
+									"picker_offsets": {
+										"translate": [
+											0,
+											20,
+											0
+										],
+										"scale": [
+											1.7,
+											1.7,
+											1.7
+										]
+									},
+									"skin_list": [
+										{
+											"variant": 0
+										},
+										{
+											"variant": 1
+										},
+										{
+											"variant": 2
+										},
+										{
+											"variant": 3
+										},
+										{
+											"variant": 4
+										},
+										{
+											"variant": 5
+										},
+										{
+											"variant": 6
+										},
+										{
+											"variant": 7
+										},
+										{
+											"variant": 8
+										},
+										{
+											"variant": 9
+										},
+										{
+											"variant": 10
+										},
+										{
+											"variant": 11
+										},
+										{
+											"variant": 12
+										},
+										{
+											"variant": 13
+										},
+										{
+											"variant": 14
+										},
+										{
+											"variant": 15
+										},
+										{
+											"variant": 16
+										},
+										{
+											"variant": 17
+										},
+										{
+											"variant": 18
+										},
+										{
+											"variant": 19
+										}
+									]
+								}
+							},
+							"minecraft:nameable": {
+								"always_show": true,
+								"allow_name_tag_renaming": false
+							},
+							"minecraft:physics": {},
+							"minecraft:conditional_bandwidth_optimization": {}
+						},
+						"component_groups": {
+							"instant_despawn_on": {
+								"minecraft:instant_despawn": {
+									"remove_child_entities": true
+								}
+							}
+						},
+						"events": {
+							"instant_despawn": {
+								"add": {
+									"component_groups": [
+										"instant_despawn_on"
+									]
+								}
+							}
+						}
+					}
+				},
+				"key": "minecraft:entity",
+				"children": [
+					{
+						"open": {
+							"description": {
+								"identifier": "minecraft:npc",
+								"is_spawnable": true,
+								"is_summonable": true,
+								"is_experimental": false
+							},
+							"components": {
+								"minecraft:damage_sensor": {
+									"triggers": {
+										"cause": "all",
+										"deals_damage": false
+									}
+								},
+								"minecraft:type_family": {
+									"family": [
+										"npc",
+										"mob"
+									]
+								},
+								"minecraft:fire_immune": true,
+								"minecraft:movement": {
+									"value": 0.5
+								},
+								"minecraft:loot": {
+									"table": "loot_tables/empty.json"
+								},
+								"minecraft:collision_box": {
+									"width": 0.6,
+									"height": 2.1
+								},
+								"minecraft:behavior.look_at_player": {
+									"priority": 0,
+									"look_distance": 6,
+									"probability": 0.02
+								},
+								"minecraft:persistent": {},
+								"minecraft:npc": {
+									"npc_data": {
+										"portrait_offsets": {
+											"translate": [
+												-7,
+												50,
+												0
+											],
+											"scale": [
+												1.75,
+												1.75,
+												1.75
+											]
+										},
+										"picker_offsets": {
+											"translate": [
+												0,
+												20,
+												0
+											],
+											"scale": [
+												1.7,
+												1.7,
+												1.7
+											]
+										},
+										"skin_list": [
+											{
+												"variant": 0
+											},
+											{
+												"variant": 1
+											},
+											{
+												"variant": 2
+											},
+											{
+												"variant": 3
+											},
+											{
+												"variant": 4
+											},
+											{
+												"variant": 5
+											},
+											{
+												"variant": 6
+											},
+											{
+												"variant": 7
+											},
+											{
+												"variant": 8
+											},
+											{
+												"variant": 9
+											},
+											{
+												"variant": 10
+											},
+											{
+												"variant": 11
+											},
+											{
+												"variant": 12
+											},
+											{
+												"variant": 13
+											},
+											{
+												"variant": 14
+											},
+											{
+												"variant": 15
+											},
+											{
+												"variant": 16
+											},
+											{
+												"variant": 17
+											},
+											{
+												"variant": 18
+											},
+											{
+												"variant": 19
+											}
+										]
+									}
+								},
+								"minecraft:nameable": {
+									"always_show": true,
+									"allow_name_tag_renaming": false
+								},
+								"minecraft:physics": {},
+								"minecraft:conditional_bandwidth_optimization": {}
+							},
+							"component_groups": {
+								"instant_despawn_on": {
+									"minecraft:instant_despawn": {
+										"remove_child_entities": true
+									}
+								}
+							},
+							"events": {
+								"instant_despawn": {
+									"add": {
+										"component_groups": [
+											"instant_despawn_on"
+										]
+									}
+								}
+							}
+						},
+						"key": "description",
+						"is_minified": true,
+						"children": {
+							"identifier": "minecraft:npc",
+							"is_spawnable": true,
+							"is_summonable": true,
+							"is_experimental": false
+						}
+					},
+					{
+						"open": {
+							"description": {
+								"identifier": "minecraft:npc",
+								"is_spawnable": true,
+								"is_summonable": true,
+								"is_experimental": false
+							},
+							"components": {
+								"minecraft:damage_sensor": {
+									"triggers": {
+										"cause": "all",
+										"deals_damage": false
+									}
+								},
+								"minecraft:type_family": {
+									"family": [
+										"npc",
+										"mob"
+									]
+								},
+								"minecraft:fire_immune": true,
+								"minecraft:movement": {
+									"value": 0.5
+								},
+								"minecraft:loot": {
+									"table": "loot_tables/empty.json"
+								},
+								"minecraft:collision_box": {
+									"width": 0.6,
+									"height": 2.1
+								},
+								"minecraft:behavior.look_at_player": {
+									"priority": 0,
+									"look_distance": 6,
+									"probability": 0.02
+								},
+								"minecraft:persistent": {},
+								"minecraft:npc": {
+									"npc_data": {
+										"portrait_offsets": {
+											"translate": [
+												-7,
+												50,
+												0
+											],
+											"scale": [
+												1.75,
+												1.75,
+												1.75
+											]
+										},
+										"picker_offsets": {
+											"translate": [
+												0,
+												20,
+												0
+											],
+											"scale": [
+												1.7,
+												1.7,
+												1.7
+											]
+										},
+										"skin_list": [
+											{
+												"variant": 0
+											},
+											{
+												"variant": 1
+											},
+											{
+												"variant": 2
+											},
+											{
+												"variant": 3
+											},
+											{
+												"variant": 4
+											},
+											{
+												"variant": 5
+											},
+											{
+												"variant": 6
+											},
+											{
+												"variant": 7
+											},
+											{
+												"variant": 8
+											},
+											{
+												"variant": 9
+											},
+											{
+												"variant": 10
+											},
+											{
+												"variant": 11
+											},
+											{
+												"variant": 12
+											},
+											{
+												"variant": 13
+											},
+											{
+												"variant": 14
+											},
+											{
+												"variant": 15
+											},
+											{
+												"variant": 16
+											},
+											{
+												"variant": 17
+											},
+											{
+												"variant": 18
+											},
+											{
+												"variant": 19
+											}
+										]
+									}
+								},
+								"minecraft:nameable": {
+									"always_show": true,
+									"allow_name_tag_renaming": false
+								},
+								"minecraft:physics": {},
+								"minecraft:conditional_bandwidth_optimization": {}
+							},
+							"component_groups": {
+								"instant_despawn_on": {
+									"minecraft:instant_despawn": {
+										"remove_child_entities": true
+									}
+								}
+							},
+							"events": {
+								"instant_despawn": {
+									"add": {
+										"component_groups": [
+											"instant_despawn_on"
+										]
+									}
+								}
+							}
+						},
+						"key": "components",
+						"is_minified": true,
+						"children": {
+							"minecraft:damage_sensor": {
+								"triggers": {
+									"cause": "all",
+									"deals_damage": false
+								}
+							},
+							"minecraft:type_family": {
+								"family": [
+									"npc",
+									"mob"
+								]
+							},
+							"minecraft:fire_immune": true,
+							"minecraft:movement": {
+								"value": 0.5
+							},
+							"minecraft:loot": {
+								"table": "loot_tables/empty.json"
+							},
+							"minecraft:collision_box": {
+								"width": 0.6,
+								"height": 2.1
+							},
+							"minecraft:behavior.look_at_player": {
+								"priority": 0,
+								"look_distance": 6,
+								"probability": 0.02
+							},
+							"minecraft:persistent": {},
+							"minecraft:npc": {
+								"npc_data": {
+									"portrait_offsets": {
+										"translate": [
+											-7,
+											50,
+											0
+										],
+										"scale": [
+											1.75,
+											1.75,
+											1.75
+										]
+									},
+									"picker_offsets": {
+										"translate": [
+											0,
+											20,
+											0
+										],
+										"scale": [
+											1.7,
+											1.7,
+											1.7
+										]
+									},
+									"skin_list": [
+										{
+											"variant": 0
+										},
+										{
+											"variant": 1
+										},
+										{
+											"variant": 2
+										},
+										{
+											"variant": 3
+										},
+										{
+											"variant": 4
+										},
+										{
+											"variant": 5
+										},
+										{
+											"variant": 6
+										},
+										{
+											"variant": 7
+										},
+										{
+											"variant": 8
+										},
+										{
+											"variant": 9
+										},
+										{
+											"variant": 10
+										},
+										{
+											"variant": 11
+										},
+										{
+											"variant": 12
+										},
+										{
+											"variant": 13
+										},
+										{
+											"variant": 14
+										},
+										{
+											"variant": 15
+										},
+										{
+											"variant": 16
+										},
+										{
+											"variant": 17
+										},
+										{
+											"variant": 18
+										},
+										{
+											"variant": 19
+										}
+									]
+								}
+							},
+							"minecraft:nameable": {
+								"always_show": true,
+								"allow_name_tag_renaming": false
+							},
+							"minecraft:physics": {},
+							"minecraft:conditional_bandwidth_optimization": {}
+						}
+					},
+					{
+						"open": {
+							"description": {
+								"identifier": "minecraft:npc",
+								"is_spawnable": true,
+								"is_summonable": true,
+								"is_experimental": false
+							},
+							"components": {
+								"minecraft:damage_sensor": {
+									"triggers": {
+										"cause": "all",
+										"deals_damage": false
+									}
+								},
+								"minecraft:type_family": {
+									"family": [
+										"npc",
+										"mob"
+									]
+								},
+								"minecraft:fire_immune": true,
+								"minecraft:movement": {
+									"value": 0.5
+								},
+								"minecraft:loot": {
+									"table": "loot_tables/empty.json"
+								},
+								"minecraft:collision_box": {
+									"width": 0.6,
+									"height": 2.1
+								},
+								"minecraft:behavior.look_at_player": {
+									"priority": 0,
+									"look_distance": 6,
+									"probability": 0.02
+								},
+								"minecraft:persistent": {},
+								"minecraft:npc": {
+									"npc_data": {
+										"portrait_offsets": {
+											"translate": [
+												-7,
+												50,
+												0
+											],
+											"scale": [
+												1.75,
+												1.75,
+												1.75
+											]
+										},
+										"picker_offsets": {
+											"translate": [
+												0,
+												20,
+												0
+											],
+											"scale": [
+												1.7,
+												1.7,
+												1.7
+											]
+										},
+										"skin_list": [
+											{
+												"variant": 0
+											},
+											{
+												"variant": 1
+											},
+											{
+												"variant": 2
+											},
+											{
+												"variant": 3
+											},
+											{
+												"variant": 4
+											},
+											{
+												"variant": 5
+											},
+											{
+												"variant": 6
+											},
+											{
+												"variant": 7
+											},
+											{
+												"variant": 8
+											},
+											{
+												"variant": 9
+											},
+											{
+												"variant": 10
+											},
+											{
+												"variant": 11
+											},
+											{
+												"variant": 12
+											},
+											{
+												"variant": 13
+											},
+											{
+												"variant": 14
+											},
+											{
+												"variant": 15
+											},
+											{
+												"variant": 16
+											},
+											{
+												"variant": 17
+											},
+											{
+												"variant": 18
+											},
+											{
+												"variant": 19
+											}
+										]
+									}
+								},
+								"minecraft:nameable": {
+									"always_show": true,
+									"allow_name_tag_renaming": false
+								},
+								"minecraft:physics": {},
+								"minecraft:conditional_bandwidth_optimization": {}
+							},
+							"component_groups": {
+								"instant_despawn_on": {
+									"minecraft:instant_despawn": {
+										"remove_child_entities": true
+									}
+								}
+							},
+							"events": {
+								"instant_despawn": {
+									"add": {
+										"component_groups": [
+											"instant_despawn_on"
+										]
+									}
+								}
+							}
+						},
+						"key": "component_groups",
+						"children": [
+							{
+								"open": {
+									"instant_despawn_on": {
+										"minecraft:instant_despawn": {
+											"remove_child_entities": true
+										}
+									}
+								},
+								"key": "instant_despawn_on",
+								"children": [
+									{
+										"open": {
+											"minecraft:instant_despawn": {
+												"remove_child_entities": true
+											}
+										},
+										"key": "minecraft:instant_despawn",
+										"is_minified": true,
+										"children": {
+											"remove_child_entities": true
+										}
+									}
+								]
+							}
+						]
+					},
+					{
+						"open": {
+							"description": {
+								"identifier": "minecraft:npc",
+								"is_spawnable": true,
+								"is_summonable": true,
+								"is_experimental": false
+							},
+							"components": {
+								"minecraft:damage_sensor": {
+									"triggers": {
+										"cause": "all",
+										"deals_damage": false
+									}
+								},
+								"minecraft:type_family": {
+									"family": [
+										"npc",
+										"mob"
+									]
+								},
+								"minecraft:fire_immune": true,
+								"minecraft:movement": {
+									"value": 0.5
+								},
+								"minecraft:loot": {
+									"table": "loot_tables/empty.json"
+								},
+								"minecraft:collision_box": {
+									"width": 0.6,
+									"height": 2.1
+								},
+								"minecraft:behavior.look_at_player": {
+									"priority": 0,
+									"look_distance": 6,
+									"probability": 0.02
+								},
+								"minecraft:persistent": {},
+								"minecraft:npc": {
+									"npc_data": {
+										"portrait_offsets": {
+											"translate": [
+												-7,
+												50,
+												0
+											],
+											"scale": [
+												1.75,
+												1.75,
+												1.75
+											]
+										},
+										"picker_offsets": {
+											"translate": [
+												0,
+												20,
+												0
+											],
+											"scale": [
+												1.7,
+												1.7,
+												1.7
+											]
+										},
+										"skin_list": [
+											{
+												"variant": 0
+											},
+											{
+												"variant": 1
+											},
+											{
+												"variant": 2
+											},
+											{
+												"variant": 3
+											},
+											{
+												"variant": 4
+											},
+											{
+												"variant": 5
+											},
+											{
+												"variant": 6
+											},
+											{
+												"variant": 7
+											},
+											{
+												"variant": 8
+											},
+											{
+												"variant": 9
+											},
+											{
+												"variant": 10
+											},
+											{
+												"variant": 11
+											},
+											{
+												"variant": 12
+											},
+											{
+												"variant": 13
+											},
+											{
+												"variant": 14
+											},
+											{
+												"variant": 15
+											},
+											{
+												"variant": 16
+											},
+											{
+												"variant": 17
+											},
+											{
+												"variant": 18
+											},
+											{
+												"variant": 19
+											}
+										]
+									}
+								},
+								"minecraft:nameable": {
+									"always_show": true,
+									"allow_name_tag_renaming": false
+								},
+								"minecraft:physics": {},
+								"minecraft:conditional_bandwidth_optimization": {}
+							},
+							"component_groups": {
+								"instant_despawn_on": {
+									"minecraft:instant_despawn": {
+										"remove_child_entities": true
+									}
+								}
+							},
+							"events": {
+								"instant_despawn": {
+									"add": {
+										"component_groups": [
+											"instant_despawn_on"
+										]
+									}
+								}
+							}
+						},
+						"key": "events",
+						"children": [
+							{
+								"open": {
+									"instant_despawn": {
+										"add": {
+											"component_groups": [
+												"instant_despawn_on"
+											]
+										}
+									}
+								},
+								"key": "instant_despawn",
+								"children": [
+									{
+										"open": {
+											"add": {
+												"component_groups": [
+													"instant_despawn_on"
+												]
+											}
+										},
+										"key": "add",
+										"children": [
+											{
+												"open": {
+													"component_groups": [
+														"instant_despawn_on"
+													]
+												},
+												"key": "component_groups",
+												"is_minified": true,
+												"children": [
+													"instant_despawn_on"
+												]
+											}
+										]
+									}
+								]
+							}
+						]
+					}
+				]
+			}
+		]
+	}
+}

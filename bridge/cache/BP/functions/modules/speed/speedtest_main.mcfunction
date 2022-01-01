@@ -1,0 +1,8 @@
+{
+	"file_path": "C:\\Users\\gross\\AppData\\Local\\Packages\\Microsoft.MinecraftUWP_8wekyb3d8bbwe\\LocalState\\games\\com.mojang\\development_behavior_packs\\Polar Anti-Cheat\\functions\\modules\\speed\\speedtest_main.mcfunction",
+	"file_type": "function",
+	"format_version": 0,
+	"file_uuid": "2cda3490_561a_47ed_a44c_0480a23d83af",
+	"file_version": 87,
+	"cache_content": "HIDE \n#Speedflags\nexecute @e[r=20,type=polar:speedtest] ~ ~ ~ scoreboard players add @p[tag=!speedFlagsOff,r=2,scores={flagcooldown=100..}] speedviolations 1\nexecute @e[r=20,type=polar:speedtest] ~ ~ ~ execute @p[tag=!speedFlagsOff,r=2,scores={flagcooldown=100..}] ~ ~ ~ function modules/speed/notifs\nexecute @e[r=20,type=polar:speedtest] ~ ~ ~ scoreboard players set @p[tag=!speedFlagsOff,r=2,scores={flagcooldown=100..}] flagcooldown 0\nexecute @e[r=20,type=polar:speedtest] ~ ~ ~ execute @p[tag=!speedFlagsOff,r=2] ~ ~ ~ tp @s ^ ^ ^-5\nexecute @a[scores={speedviolations=1..}] ~ ~ ~ tag @s add speedFlag\nexecute @a[scores={speedviolations=6..}] ~ ~ ~ tag @s[tag=autoMod] add Ban\n \n#Summons the speed detector entity every 15 sec\n#Temp fix\nscoreboard players add @s[scores={speedtest_timer=!15..}] speedtest_timer 1\nexecute @a[rm=0.1,r=30] ~ ~ ~ tag @a[rm=0.1,r=30] add nearothers\nexecute @a[rm=31,r=60] ~ ~ ~ tag @s remove nearothers\nexecute @s[tag=!nearothers,scores={speedtest_timer=15..,inair=..3,detect_glide=0,detect_levitate=0}] ~ ~ ~ summon polar:speedtest ^ ^ ^9\nexecute @e[type=ender_pearl] ~ ~ ~ event entity @e[r=3] timerup\nexecute @s[scores={speedtest_timer=15..}] ~ ~ ~ scoreboard players set @s speedtest_timer 0\nexecute @s[scores={speedtest_timer=..0}] ~ ~ ~ scoreboard players set @s speedtest_timer 0"
+}
