@@ -1,0 +1,36 @@
+#bridge-file-version: #4
+HIDE 
+scoreboard players add @a detect_helmet 0
+scoreboard players add @a detect_chest 0
+scoreboard players add @a detect_leggings 0
+scoreboard players add @a detect_boots 0
+scoreboard players add @a detect_ground 0
+scoreboard players add @a detect_glide 0
+scoreboard players add @a detect_levitate 0
+scoreboard players add @a detect_move 0
+scoreboard players add @a fly_timer 0
+scoreboard players add @a kills 0
+scoreboard players add @a deaths 0
+scoreboard players add @a killauratest 0
+scoreboard players add @a auratest_timer 0
+scoreboard players add @a flyviolations 0
+scoreboard players add @a flagcooldown 0
+scoreboard players add @a speedtest_timer 0
+scoreboard players add @a speedviolations 0
+scoreboard players add @a inair 0
+scoreboard players add @a gmcviolations 0
+scoreboard players add @a itemviolations 0
+scoreboard players add @a jesus_timer 0
+scoreboard players add @a ench_helmet 0
+scoreboard players add @a ench_chest 0
+scoreboard players add @a ench_legs 0
+scoreboard players add @a ench_boots 0
+scoreboard players add @a timeplayedtick 0
+scoreboard players add @a timeplayedsec 0
+scoreboard players add @a timeplayedhr 0
+scoreboard players add @a timeplayeddy 0
+scoreboard players add @a actionbar 0
+scoreboard players add @a armorviolations 0
+scoreboard players add @a killstreak 0
+scoreboard players add @a contviolations 0
+scoreboard players add @e[type=polar:settings] safetyscore 0

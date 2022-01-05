@@ -1,8 +1,0 @@
-{
-	"file_path": "C:\\Users\\gross\\AppData\\Local\\Packages\\Microsoft.MinecraftUWP_8wekyb3d8bbwe\\LocalState\\games\\com.mojang\\development_behavior_packs\\Polar Anti-Cheat\\functions\\modules\\other\\antigmc.mcfunction",
-	"file_type": "function",
-	"format_version": 0,
-	"file_uuid": "cd4f64aa_f335_4805_b044_8231e6d6589c",
-	"file_version": 30,
-	"cache_content": "HIDE \n#Anti-Creative for non-staff\ngamemode s @s[m=c,tag=!staff]\nscoreboard players add @s gmcviolations 1\n \n#Notify Offender\nexecute @s[tag=!staffstatus,scores={gmcviolations=1}] ~~~ tellraw @s {\"rawtext\":[{\"text\":\"§l§9[§bPAC§9]§r You tried in creative mode as a non-staff. Violations: \"},{\"score\":{\"name\": \"@s\",\"objective\": \"gmcviolations\"}}]}\nexecute @s[tag=!staffstatus,scores={gmcviolations=2}] ~~~ tellraw @s {\"rawtext\":[{\"text\":\"§l§9[§bPAC§9]§r You tried in creative mode as a non-staff. Violations: \"},{\"score\":{\"name\": \"@s\",\"objective\": \"gmcviolations\"}}]}\nexecute @s[tag=!staffstatus,scores={gmcviolations=3..}] ~~~ tellraw @s {\"rawtext\":[{\"text\":\"§l§9[§bPAC§9]§r You tried in creative mode as a non-staff, you will be banned next time. (If automod is on) Violations: \"},{\"score\":{\"name\": \"@s\",\"objective\": \"gmcviolations\"}}]}\nexecute @s[tag=!staffstatus,scores={gmcviolations=1..}] ~~~ tag @s add creativeFlag\nexecute @s[tag=!staffstatus,scores={gmcviolations=4..}] ~~~ tag @s[tag=autoMod] add Ban\n \n#Notify Staff\nexecute @s ~ ~ ~ tellraw @a[tag=staff,tag=notifsOn] {\"rawtext\":[{\"text\":\"§l§9[§bPAC§9]§r \"},{\"selector\":\"@s\"},{\"text\":\" tried to enter in creative mode as a non-staff. Violations: \"},{\"score\":{\"name\": \"@s\",\"objective\": \"gmcviolations\"}}]}"
-}

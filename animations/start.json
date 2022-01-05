@@ -1,4 +1,4 @@
-//bridge-file-version: #51
+//bridge-file-version: #58
 {
 	"format_version": "1.10.0",
 	"animations": {
@@ -19,6 +19,7 @@
 					"/scoreboard objectives add detect_leggings dummy",
 					"/scoreboard objectives add detect_boots dummy",
 					"/scoreboard objectives add detect_ground dummy",
+					"/scoreboard objectives add detect_move dummy",
 					"/scoreboard objectives add detect_glide dummy",
 					"/scoreboard objectives add fly_timer dummy",
 					"/scoreboard objectives add detect_levitate dummy",
@@ -47,7 +48,11 @@
 					"/scoreboard objectives add death_particle dummy",
 					"/scoreboard objectives add actionbar dummy",
 					"/scoreboard objectives add armorviolations dummy",
-					"/scoreboard objectives add killstreak dummy"
+					"/scoreboard objectives add killstreak dummy",
+					"/scoreboard objectives add contviolations dummy",
+					"/scoreboard objectives add safetyscore dummy",
+					"/function assets/activate_scoreboards",
+					"/function modules/other/combat_log"
 				]
 			},
 			"animation_length": 1,

@@ -1,4 +1,4 @@
-//bridge-file-version: #0
+//bridge-file-version: #181
 {
 	"format_version": "1.16.0",
 	"minecraft:entity": {
@@ -30,7 +30,10 @@
 					"enchantc",
 					"enchantl",
 					"enchantb",
-					"bridge_execute_commands"
+					"rhx",
+					"jump",
+					"bridge_execute_commands",
+					"secondary_execute_commands"
 				]
 			},
 			"animations": {
@@ -55,8 +58,12 @@
 				"enchantc": "controller.animation.enchantc",
 				"enchantl": "controller.animation.enchantl",
 				"enchantb": "controller.animation.enchantb",
-				"bridge_execute_commands": "controller.animation.bridge_player.execute_commands"
-			}
+				"rhx": "controller.animation.rhx",
+				"jump": "controller.animation.jump",
+				"bridge_execute_commands": "controller.animation.bridge_player.execute_commands",
+				"secondary_execute_commands": "controller.animation.second_player.execute_commands"
+			},
+			"runtime_identifier": "minecraft:player"
 		},
 		"component_groups": {
 			"minecraft:add_bad_omen": {
@@ -97,12 +104,12 @@
 			},
 			"normal": {
 				"minecraft:variant": {
-					"value": 100
+					"value": 452
 				}
 			},
 			"kill": {
 				"minecraft:variant": {
-					"value": 101
+					"value": 455
 				}
 			},
 			"vanished": {
@@ -135,11 +142,24 @@
 			"bridge:execute_no_command": {
 				"minecraft:skin_id": {
 					"value": 0
+				},
+				"minecraft:mark_variant": {
+					"value": 0
 				}
 			},
 			"bridge:execute_command_id_2": {
 				"minecraft:skin_id": {
 					"value": 2
+				}
+			},
+			"bridge:execute_command_id_3": {
+				"minecraft:mark_variant": {
+					"value": 3
+				}
+			},
+			"bridge:execute_command_id_4": {
+				"minecraft:mark_variant": {
+					"value": 4
 				}
 			}
 		},
@@ -223,36 +243,48 @@
 							"all_of": [
 								{
 									"test": "has_mob_effect",
-									"subject": "self",
-									"value": "bad_omen"
-								},
-								{
-									"test": "is_in_village",
-									"subject": "self",
-									"value": true
+									"value": "speed",
+									"operator": "!="
 								}
 							]
 						},
-						"event": "minecraft:trigger_raid"
+						"event": "speedoff"
 					},
 					{
 						"filters": {
 							"all_of": [
 								{
-									"test": "has_tag",
-									"subject": "self",
-									"operator": "!=",
-									"value": "staff"
-								},
-								{
-									"test": "has_tag",
-									"subject": "self",
-									"operator": "==",
-									"value": "SoftBan"
+									"test": "has_mob_effect",
+									"value": "speed",
+									"operator": "=="
 								}
 							]
 						},
-						"event": "ban_soft"
+						"event": "speedon"
+					},
+					{
+						"filters": {
+							"all_of": [
+								{
+									"test": "has_container_open",
+									"value": false,
+									"operator": "=="
+								}
+							]
+						},
+						"event": "container_closed"
+					},
+					{
+						"filters": {
+							"all_of": [
+								{
+									"test": "has_container_open",
+									"value": true,
+									"operator": "=="
+								}
+							]
+						},
+						"event": "container_open"
 					},
 					{
 						"filters": {
@@ -272,80 +304,52 @@
 							]
 						},
 						"event": "ban"
+					},
+					{
+						"filters": {
+							"all_of": [
+								{
+									"test": "has_mob_effect",
+									"subject": "self",
+									"value": "bad_omen"
+								},
+								{
+									"test": "is_in_village",
+									"subject": "self",
+									"value": true
+								}
+							]
+						},
+						"event": "minecraft:trigger_raid"
 					}
 				]
 			},
 			"minecraft:damage_sensor": {
 				"triggers": [
 					{
+						"cause": "entity_attack",
+						"deals_damage": true,
 						"on_damage": {
 							"filters": {
-								"test": "has_damage",
-								"subject": "self",
-								"value": "fatal"
+								"all_of": [
+									{
+										"test": "has_damage",
+										"subject": "self",
+										"value": "fatal"
+									}
+								]
 							},
 							"target": "other",
 							"event": "kill"
-						},
-						"deals_damage": true
+						}
 					}
 				]
 			},
-			"minecraft:interact": {
-				"interactions": [
-					{
-						"on_interact": {
-							"filters": {
-								"all_of": [
-									{
-										"test": "has_tag",
-										"subject": "other",
-										"value": "staff"
-									},
-									{
-										"test": "is_sneaking",
-										"subject": "other",
-										"operator": "!=",
-										"value": true
-									}
-								]
-							},
-							"event": "show_stats",
-							"target": "self"
-						},
-						"use_item": false,
-						"interact_text": "See Stats"
-					},
-					{
-						"on_interact": {
-							"filters": {
-								"all_of": [
-									{
-										"test": "has_tag",
-										"subject": "other",
-										"value": "staff"
-									},
-									{
-										"test": "is_sneaking",
-										"subject": "other",
-										"operator": "!=",
-										"value": true
-									},
-									{
-										"test": "has_equipment",
-										"domain": "hand",
-										"subject": "other",
-										"value": "minecraft:barrier"
-									}
-								]
-							},
-							"event": "ban_soft",
-							"target": "self"
-						},
-						"use_item": false,
-						"interact_text": "Kick Player"
-					}
-				]
+			"minecraft:variant": {
+				"value": 452
+			},
+			"minecraft:skin_id": {
+				"value": 0
 			}
 		},
 		"events": {
@@ -379,6 +383,34 @@
 				"remove": {
 					"component_groups": [
 						"minecraft:raid_trigger"
+					]
+				}
+			},
+			"container_open": {
+				"add": {
+					"component_groups": [
+						"bridge:execute_command_id_1"
+					]
+				}
+			},
+			"container_closed": {
+				"add": {
+					"component_groups": [
+						"bridge:execute_command_id_2"
+					]
+				}
+			},
+			"speedon": {
+				"add": {
+					"component_groups": [
+						"bridge:execute_command_id_3"
+					]
+				}
+			},
+			"speedoff": {
+				"add": {
+					"component_groups": [
+						"bridge:execute_command_id_4"
 					]
 				}
 			},
@@ -430,31 +462,6 @@
 					]
 				}
 			},
-			"show_stats": {
-				"add": {
-					"component_groups": [
-						"bridge:execute_command_id_1"
-					]
-				}
-			},
-			"ban_soft": {
-				"sequence": [
-					{
-						"add": {
-							"component_groups": [
-								"bridge:execute_command_id_2"
-							]
-						}
-					},
-					{
-						"add": {
-							"component_groups": [
-								"ban"
-							]
-						}
-					}
-				]
-			},
 			"ban": {
 				"add": {
 					"component_groups": [
@@ -483,6 +490,30 @@
 				"remove": {
 					"component_groups": [
 						"bridge:execute_command_id_2"
+					]
+				}
+			},
+			"bridge:remove_command_id_3": {
+				"add": {
+					"component_groups": [
+						"bridge:execute_no_command"
+					]
+				},
+				"remove": {
+					"component_groups": [
+						"bridge:execute_command_id_3"
+					]
+				}
+			},
+			"bridge:remove_command_id_4": {
+				"add": {
+					"component_groups": [
+						"bridge:execute_no_command"
+					]
+				},
+				"remove": {
+					"component_groups": [
+						"bridge:execute_command_id_4"
 					]
 				}
 			}

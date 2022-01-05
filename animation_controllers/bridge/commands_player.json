@@ -1,3 +1,4 @@
+//bridge-file-version: #14
 {
 	"format_version": "1.10.0",
 	"animation_controllers": {
@@ -20,7 +21,7 @@
 						}
 					],
 					"on_entry": [
-						"/function polar/nearest_player_stats",
+						"/tag @s add in_container",
 						"@s bridge:remove_command_id_1"
 					]
 				},
@@ -31,8 +32,44 @@
 						}
 					],
 					"on_entry": [
-						"/tag @s remove BanSoft",
+						"/tag @s remove in_container",
 						"@s bridge:remove_command_id_2"
+					]
+				}
+			}
+		},
+		"controller.animation.second_player.execute_commands": {
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"execute_command_id_4": "query.mark_variant == 4"
+						},
+						{
+							"execute_command_id_3": "query.mark_variant == 3"
+						}
+					]
+				},
+				"execute_command_id_3": {
+					"transitions": [
+						{
+							"default": "query.mark_variant != 3"
+						}
+					],
+					"on_entry": [
+						"/tag @s add speedeffect",
+						"@s bridge:remove_command_id_3"
+					]
+				},
+				"execute_command_id_4": {
+					"transitions": [
+						{
+							"default": "query.mark_variant != 4"
+						}
+					],
+					"on_entry": [
+						"/tag @s remove speedeffect",
+						"@s bridge:remove_command_id_4"
 					]
 				}
 			}

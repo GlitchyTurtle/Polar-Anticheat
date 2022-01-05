@@ -1,4 +1,4 @@
-#bridge-file-version: #92
+#bridge-file-version: #103
 execute @s ~ ~ ~ tellraw @p[tag=staff] {"rawtext":[{"text":"---------------------------------------------"}]}
 execute @s ~ ~ ~ tellraw @p[tag=staff] {"rawtext":[{"text":"§l"},{"selector":"@s"},{"text":"'s §l§9[§bPAC§9]§r Stats"}]}
 execute @s ~ ~ ~ tellraw @p[tag=staff] {"rawtext":[{"text":"---------------------------------------------"}]}
@@ -8,10 +8,16 @@ execute @s ~ ~ ~ tellraw @p[tag=staff] {"rawtext":[{"text":"Killaura Flags:§c "
 execute @s ~ ~ ~ tellraw @p[tag=staff] {"rawtext":[{"text":"Speed Flags:§c "},{"score":{"name": "@s","objective": "speedviolations"}}]}
 execute @s ~ ~ ~ tellraw @p[tag=staff] {"rawtext":[{"text":"Gamemode Flags:§c "},{"score":{"name": "@s","objective": "gmcviolations"}}]}
 execute @s ~ ~ ~ tellraw @p[tag=staff] {"rawtext":[{"text":"Itemban Flags:§c "},{"score":{"name": "@s","objective": "itemviolations"}}]}
+execute @s ~ ~ ~ tellraw @p[tag=staff] {"rawtext":[{"text":"NBT Armor Flags:§c "},{"score":{"name": "@s","objective": "armorviolations"}}]}
+execute @s ~ ~ ~ tellraw @p[tag=staff] {"rawtext":[{"text":"Autototem Flags:§c "},{"score":{"name": "@s","objective": "totemviolations"}}]}
+execute @s ~ ~ ~ tellraw @p[tag=staff] {"rawtext":[{"text":"Container Flags:§c "},{"score":{"name": "@s","objective": "contviolations"}}]}
+execute @s[tag=jesusFlag] ~ ~ ~ tellraw @p[tag=staff] {"rawtext":[{"text":"Jesus Flags:§c 1+"}]}
+execute @s[tag=!jesusFlag] ~ ~ ~ tellraw @p[tag=staff] {"rawtext":[{"text":"Jesus Flags:§c 0"}]}
 execute @s ~ ~ ~ tellraw @p[tag=staff] {"rawtext":[{"text":"---------------------------------------------"}]}
 execute @s ~ ~ ~ tellraw @p[tag=staff] {"rawtext":[{"text":"§lK/D:"}]}
 execute @s ~ ~ ~ tellraw @p[tag=staff] {"rawtext":[{"text":"Kills:§b "},{"score":{"name": "@s","objective": "kills"}}]}
 execute @s ~ ~ ~ tellraw @p[tag=staff] {"rawtext":[{"text":"Deaths:§b "},{"score":{"name": "@s","objective": "deaths"}}]}
+execute @s ~ ~ ~ tellraw @p[tag=staff] {"rawtext":[{"text":"Killstreak:§b "},{"score":{"name": "@s","objective": "killstreak"}}]}
 execute @s ~ ~ ~ tellraw @p[tag=staff] {"rawtext":[{"text":"---------------------------------------------"}]}
 execute @s ~ ~ ~ tellraw @p[tag=staff] {"rawtext":[{"text":"§lEnchants:"}]}
 execute @s[scores={ench_helmet=0}] ~ ~ ~ tellraw @p[tag=staff] {"rawtext":[{"text":"Helmet: §cUnenchanted"}]}

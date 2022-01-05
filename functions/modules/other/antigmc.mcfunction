@@ -1,4 +1,4 @@
-#bridge-file-version: #30
+#bridge-file-version: #33
 HIDE 
 #Anti-Creative for non-staff
 gamemode s @s[m=c,tag=!staff]
@@ -13,3 +13,7 @@ execute @s[tag=!staffstatus,scores={gmcviolations=4..}] ~~~ tag @s[tag=autoMod] 
  
 #Notify Staff
 execute @s ~ ~ ~ tellraw @a[tag=staff,tag=notifsOn] {"rawtext":[{"text":"§l§9[§bPAC§9]§r "},{"selector":"@s"},{"text":" tried to enter in creative mode as a non-staff. Violations: "},{"score":{"name": "@s","objective": "gmcviolations"}}]}
+ 
+#Server Saftey Stats
+execute @e[type=polar:settings,tag=!antigmc] ~ ~ ~ scoreboard players add @s safetyscore 1
+tag @e[type=polar:settings] add antigmc

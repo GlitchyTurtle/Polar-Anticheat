@@ -1,7 +1,7 @@
-#bridge-file-version: #17
+#bridge-file-version: #31
 #No more beehives with nbt
-clear @s[tag=!staff,tag=!nbtFlags_off] beehive
-clear @s[tag=!staff,tag=!nbtFlags_off] bee_nest
+clear @a[tag=!staff,tag=!nbtFlagsOff] beehive
+clear @a[tag=!staff,tag=!nbtFlagsOff] bee_nest
  
 # Clears ground items - thanks to MrDiamond64 for this!
 kill @e[type=item,name="Bucket Of Cod"]
@@ -24,9 +24,16 @@ kill @e[type=item,name="§g§lMovingBlock BeeNest Command"]
 fill ~13 ~5 ~13 ~-13 ~-5 ~-13 air 0 replace bee_nest -1
 fill ~13 ~5 ~13 ~-13 ~-5 ~-13 air 0 replace beehive -1
 fill ~10 ~3 ~10 ~-10 ~-3 ~-10 air 0 replace unknown -1
-execute @e ~~~ fill ~-5 -64 ~-5 ~5 255 ~5 air 0 replace bee_nest -1
-execute @e ~~~ fill ~-5 -64 ~-5 ~5 255 ~5 air 0 replace beehive -1
+execute @a ~~~ fill ~-5 -64 ~-5 ~5 255 ~5 air 0 replace bee_nest -1
+execute @a ~~~ fill ~-5 -64 ~-5 ~5 255 ~5 air 0 replace beehive -1
  
 #Just in case the boat entity does not work
-execute @e[type=boat] ~ ~ ~ execute @e[r=10] ~ ~ ~ ride @e[type=!player] stop_riding
-execute @e[type=player] ~~~ ride @s evict_riders
+execute @e[c=1,type=boat] ~ ~ ~ execute @e[r=10] ~ ~ ~ ride @e[type=!player] stop_riding
+execute @e[c=1,type=player] ~~~ ride @s evict_riders
+ 
+#To prevent disablers
+execute @a[tag=nbtFlagsOff,tag=!staff] ~ ~ ~ tag @s remove nbtFlagsOff
+ 
+#Server Saftey Stats
+execute @e[type=polar:settings,tag=!nbt] ~ ~ ~ scoreboard players add @s safetyscore 4
+tag @e[type=polar:settings] add nbt

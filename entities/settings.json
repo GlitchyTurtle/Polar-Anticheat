@@ -1,4 +1,4 @@
-//bridge-file-version: #105
+//bridge-file-version: #106
 {
 	"format_version": "1.16.0",
 	"minecraft:entity": {
@@ -44,7 +44,8 @@
 			"minecraft:tick_world": {
 				"radius": 1,
 				"never_despawn": true
-			}
+			},
+			"minecraft:conditional_bandwidth_optimization": {}
 		},
 		"events": {
 			"despawn": {

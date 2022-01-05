@@ -1,4 +1,4 @@
-#bridge-file-version: #27
+#bridge-file-version: #30
 #Cooldown
 scoreboard players set @s flagcooldown 0
  

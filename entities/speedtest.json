@@ -1,4 +1,4 @@
-//bridge-file-version: #88
+//bridge-file-version: #89
 {
 	"format_version": "1.16.0",
 	"minecraft:entity": {
@@ -50,7 +50,8 @@
 					0,
 					1
 				]
-			}
+			},
+			"minecraft:conditional_bandwidth_optimization": {}
 		},
 		"events": {
 			"timerup": {

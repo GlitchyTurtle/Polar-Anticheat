@@ -1,4 +1,4 @@
-#bridge-file-version: #18
+#bridge-file-version: #20
 HIDE 
 #Notify Staff
 execute @s[scores={speedviolations=1..5}] ~ ~ ~ tellraw @a[tag=staff,tag=notifsOn] {"rawtext":[{"text":"§l§9[§bPAC§9]§r "},{"selector":"@s"},{"text":" has failed the speed test. Violations: "},{"score":{"name": "@s","objective": "speedviolations"}}]}

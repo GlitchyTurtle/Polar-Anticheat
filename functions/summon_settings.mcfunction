@@ -1,4 +1,4 @@
-#bridge-file-version: #1
+#bridge-file-version: #3
 #HIDE
-summon polar:settings 0 0 0
-setblock 0 0 0 redstone_block
+summon polar:settings 0 -64 0
+setblock 0 -64 0 barrier

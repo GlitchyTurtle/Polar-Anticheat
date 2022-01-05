@@ -1,69 +1,44 @@
-#bridge-file-version: #158
+#bridge-file-version: #200
 HIDE 
 #Anti-Disabler
 gamerule randomtickspeed 1
  
 #Modules
-execute @a[m=!c,tag=!flyFlagsOff] ~ ~ ~ function modules/fly/fly_main
-execute @a[tag=!killauraFlagsOff] ~ ~ ~ function modules/killaura/killaura_main
-execute @a[m=!c,tag=!speedFlagsOff] ~ ~ ~ function modules/speed/speedtest_main
-execute @a[tag=!itembanFlagsOff] ~ ~ ~ function modules/itemban/itemban_main
-execute @a[m=!c,tag=!jesusFlagsOff] ~ ~ ~ function modules/jesus/jesus_main
-execute @a[tag=!nbtFlags_off] ~ ~ ~ function modules/nbt/other_nbt
+function config
  
 #Other
-execute @a[m=c,tag=!staff,tag=!gamemodeFlagsOff] ~ ~ ~ function modules/other/antigmc
 execute @a[tag=!staff,tag=freeze] ~ ~ ~ function modules/other/freeze_runtime
 execute @a ~ ~ ~ function modules/other/timeplayed
-execute @a[scores={actionbar=1..}] ~ ~ ~ function nonessential/actionbar
- 
+execute @a[scores={actionbar=1..}] ~ ~ ~ function other/actionbar
+execute @a[scores={detect_ground=1,detect_glide=0,detect_levitate=0}] ~ ~ ~ scoreboard players set @s inair 0
 execute @a[tag=armorBan,scores={ench_helmet=1,flagcooldown=100}] ~ ~ ~ function modules/nbt/armor_enchants
 execute @a[tag=armorBan,scores={ench_chest=1,flagcooldown=100}] ~ ~ ~ function modules/nbt/armor_enchants
 execute @a[tag=armorBan,scores={ench_legs=1,flagcooldown=100}] ~ ~ ~ function modules/nbt/armor_enchants
 execute @a[tag=armorBan,scores={ench_boots=1,flagcooldown=100}] ~ ~ ~ function modules/nbt/armor_enchants
  
+execute @a ~ ~ ~ execute @a[rm=0.1,r=20] ~ ~ ~ tag @s add nearothers
+execute @a ~ ~ ~ execute @a[rm=20,r=100] ~ ~ ~ tag @s remove nearothers
  
 #Flag Cooldown
 execute @a[scores={flagcooldown=!100}] ~ ~ ~ scoreboard players add @s flagcooldown 1
  
-#Scoreboard Activate
-scoreboard players add @a detect_helmet 0
-scoreboard players add @a detect_chest 0
-scoreboard players add @a detect_leggings 0
-scoreboard players add @a detect_boots 0
-scoreboard players add @a detect_ground 0
-scoreboard players add @a detect_glide 0
-scoreboard players add @a detect_levitate 0
-scoreboard players add @a fly_timer 0
-scoreboard players add @a kills 0
-scoreboard players add @a deaths 0
-scoreboard players add @a killauratest 0
-scoreboard players add @a auratest_timer 0
-scoreboard players add @a flyviolations 0
-scoreboard players add @a flagcooldown 0
-scoreboard players add @a speedtest_timer 0
-scoreboard players add @a speedviolations 0
-scoreboard players add @a inair 0
-scoreboard players add @a gmcviolations 0
-scoreboard players add @a itemviolations 0
-scoreboard players add @a jesus_timer 0
-scoreboard players add @a ench_helmet 0
-scoreboard players add @a ench_chest 0
-scoreboard players add @a ench_legs 0
-scoreboard players add @a ench_boots 0
-scoreboard players add @a timeplayedtick 0
-scoreboard players add @a timeplayedsec 0
-scoreboard players add @a timeplayedhr 0
-scoreboard players add @a timeplayeddy 0
-scoreboard players add @a actionbar 0
-scoreboard players add @a armorviolations 0
-scoreboard players add @a killstreak 0
- 
 #Settings
-execute @a[c=1] ~ ~ ~ detect 0 0 0 bedrock 0 function summon_settings
+execute @a[c=1] ~ ~ ~ detect 0 -64 0 bedrock 0 function summon_settings
 execute @e[type=polar:settings,tag=automod_enabled] ~ ~ ~ tag @a add autoMod
 execute @e[type=polar:settings,tag=automod_disabled] ~ ~ ~ tag @a remove autoMod
 execute @e[type=polar:settings,tag=killstreak_enabled] ~ ~ ~ tag @a add showkillstreaks
 execute @e[type=polar:settings,tag=killstreak_disabled] ~ ~ ~ tag @a remove showkillstreaks
 execute @e[type=polar:settings,tag=earmor_enabled] ~ ~ ~ tag @a remove armorBan
 execute @e[type=polar:settings,tag=earmor_disabled] ~ ~ ~ tag @a add armorBan
+execute @e[type=polar:settings,tag=antinpc] ~ ~ ~ event entity @e[type=npc] instant_despawn
+execute @e[type=polar:settings,tag=harming_enabled] ~ ~ ~ tag @a remove harmingBan
+execute @e[type=polar:settings,tag=harming_disabled] ~ ~ ~ tag @a add harmingBan
+execute @e[type=polar:settings,tag=tnt_enabled] ~ ~ ~ tag @a remove tntBan
+execute @e[type=polar:settings,tag=tnt_disabled] ~ ~ ~ tag @a add tntBan
+ 
+#Server Saftey Stats
+execute @e[type=polar:settings,tag=!armor,tag=earmor_disabled] ~ ~ ~ scoreboard players add @s safetyscore 3
+tag @e[type=polar:settings] add armor
+ 
+execute @e[type=polar:settings,tag=!armor,tag=earmor_enabled] ~ ~ ~ scoreboard players remove @s safetyscore 3
+tag @e[type=polar:settings] add armor

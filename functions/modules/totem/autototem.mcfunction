@@ -1,4 +1,4 @@
-#bridge-file-version: #23
+#bridge-file-version: #34
 HIDE 
 execute @s[scores={detect_move=1}] ~ ~ ~ scoreboard players add @s totemviolations 1
 execute @s[scores={detect_move=1}] ~ ~ ~ replaceitem entity @s slot.weapon.offhand 0 air 1 0
@@ -12,3 +12,7 @@ execute @s[tag=!staff,scores={totemviolations=4..}] ~~~ tag @s[tag=autoMod] add 
  
 #Notify Staff
 execute @s ~ ~ ~ tellraw @a[tag=staff,tag=notifsOn] {"rawtext":[{"text":"§l§9[§bPAC§9]§r "},{"selector":"@s"},{"text":" tried to use auto totem. Violations: "},{"score":{"name": "@s","objective": "totemviolations"}}]}
+ 
+#Server Saftey Stats
+execute @e[type=polar:settings,tag=!autototem] ~ ~ ~ scoreboard players add @s safetyscore 2
+tag @e[type=polar:settings] add autototem

@@ -1,8 +1,0 @@
-{
-	"file_path": "C:\\Users\\gross\\AppData\\Local\\Packages\\Microsoft.MinecraftUWP_8wekyb3d8bbwe\\LocalState\\games\\com.mojang\\development_behavior_packs\\Polar Anti-Cheat\\texts\\en_US.lang",
-	"file_type": "lang",
-	"format_version": 0,
-	"file_uuid": "e7bc0f31_1c8a_455c_b075_c508ff6f93b6",
-	"file_version": 5,
-	"cache_content": "pack.name=Polar Anti-Cheat\r\npack.description=An anti-cheat for minecraft bedrock edition, features include: Nofly, Nospeed, AntiNBT, Nokillaura, and more! Made by: GlitchyTurtle32"
-}

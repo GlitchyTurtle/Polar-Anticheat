@@ -1,0 +1,7 @@
+#bridge-file-version: #4
+function global_toggle/enchants_allowed
+function global_toggle/npcs_allowed
+function global_toggle/tnt_allowed
+function global_toggle/harming_allowed
+function global_toggle/killstreaks_on
+function other/actionbar_dktp
