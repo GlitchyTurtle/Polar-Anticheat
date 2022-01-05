@@ -197,18 +197,23 @@ Anti Spawn-in:<br />
 + There are a few commands labeled ```/function tools/kits/"kitname"``` and each of them can be set up by you, with a structure block saved with the name "kitname"_kit (remove "kitname" with the corresponding kit name, such as diamond, netherite, or gold).
 
 + This addon can detect many different player actions, including moving, gliding, left clicking, sprinting, sneaking, is on ground, levitating, deaths, kills, what armor they are wearing, if their armor is enchanted, and a few smaller ones. You can use all of these for your own systems, like a system to only let people wearing enchanted diamond armor ender an area. The command for that system (just the chesplate) would be: ```/testfor @a[r=10,scores={detect_chest=5,ench_chest=1}]```
+  
 </div>
 <div align="center">
   <img src="https://static.wixstatic.com/media/8ffe73_893b3a5b2dc84eeba5742cf6751c36c9~mv2.png/v1/fill/w_644,h_337,al_c,q_85,usm_0.66_1.00_0.01/Minecraft%202021-11-12%204_54_56%20PM.webp" width="500" />
 </div>
 <div align="center">
-
+<div align="left">
+ 
 + Its possible to create your own actionbar message with commands - if you want to use kills, deaths, or time played use this for reference: ```{"score":{"name": "@s","objective": "kills"}}``` ```{"score":{"name": "@s","objective": "deaths"}}``` ```{"score":{"name": "@s","objective": "timeplayeddy"}},{"text":":"},{"score":{"name": "@s","objective": "timeplayedhr"}},{"text":":"},{"score":{"name": "@s","objective": "timeplayedmin"}},{"text":":"},{"score":{"name": "@s","objective": "timeplayedsec"}}```
+  
 </div>
 <div align="center">
   <img src="https://static.wixstatic.com/media/8ffe73_e318f5e34aae445d87b642dcc52c2cf1~mv2.png/v1/fill/w_818,h_213,al_c,lg_1,q_85/Minecraft%202021-11-12%205_21_38%20PM.webp" width="500" />
 </div>
-
+<div align="left">
+  
+ 
 + You can specially edit what modules are enabled/disabled by going into the files and opening the config.mcfunction (file path: Polar Anti-Cheat\functions, then click on the config file)! Say you have a racing server, or teleport people more than 3+ blocks at a time, you can disable the speed module for everyone.
 
 + If you own a server with over 10,000 players, you can request a specific version from me on discord: **Glitch#8024** - I'll usually be happy to help customize!
