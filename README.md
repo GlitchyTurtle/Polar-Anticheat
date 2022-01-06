@@ -7,7 +7,7 @@ The best non-script anti-cheat for minecraft bedrock edition! It does not requir
 <div align="left">
 
 # Setup
-To install this anti-cheat to your realm/world you need to install the .mcpack and apply it to your world! Thats it, to change settings, simply run the command ```/function global_toggle``` (and look through the suggested commands)! You can always use ```/function help``` or ```/function credits``` if you need more help!
+To install this anti-cheat to your realm/world you need to install the .mcpack and apply it to your world! Thats it, to change settings, simply run the command ```/function global_toggle``` (and look through the suggested commands)! You can always use ```/function help``` or ```/function credits``` if you need more help! I reccomend you go to 0 80 0 and run the command ```function polar/reset_settings``` if you are finding bugs. 
 
 # Full List of usable commands
   
