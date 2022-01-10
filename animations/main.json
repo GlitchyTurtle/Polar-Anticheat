@@ -14,7 +14,8 @@
 					"variable.legs_ench = query.armor_material_slot(2) == 1;",
 					"variable.legs_enchleather = query.armor_material_slot(2) == 3;",
 					"variable.boots_ench = query.armor_material_slot(3) == 1;",
-					"variable.boots_enchleather = query.armor_material_slot(3) == 3;"
+					"variable.boots_enchleather = query.armor_material_slot(3) == 3;",
+					"/gamerule functioncommandlimit 10000"
 				]
 			},
 			"animation_length": 0.01,
