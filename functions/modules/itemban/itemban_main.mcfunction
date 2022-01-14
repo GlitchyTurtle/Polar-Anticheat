@@ -23,6 +23,7 @@ clear @s[tag=!staff] light_block
 clear @s[tag=!staff] border_block
 clear @s[tag=!staff] compound
 clear @s[tag=!staff] frosted_ice
+clear @s[tag=!staff] mob_spawner
 clear @s[tag=!staff,tag=harmingBan] arrow 24
 clear @s[tag=!staff,tag=harmingBan] arrow 25
 clear @s[tag=!staff,tag=harmingBan] splash_potion 23
