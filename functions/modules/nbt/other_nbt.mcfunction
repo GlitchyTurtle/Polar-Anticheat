@@ -2,6 +2,9 @@
 #No more beehives with nbt
 clear @a[tag=!staff,tag=!nbtFlagsOff] beehive
 clear @a[tag=!staff,tag=!nbtFlagsOff] bee_nest
+clear @a[tag=!staff,tag=!nbtFlagsOff] invisible_bedrock
+clear @a[tag=!staff,tag=!nbtFlagsOff] unknown
+clear @a[tag=!staff,tag=!nbtFlagsOff] mob_spawner
  
 #Gets rid of natural beehives/bee nests
 fill ~13 ~5 ~13 ~-13 ~-5 ~-13 air 0 replace bee_nest -1
@@ -33,7 +36,8 @@ kill @e[type=item,name="§g§lBeeNest Command"]
 kill @e[type=item,name="§g§lSpoofed BeeNest Command"]
 kill @e[type=item,name="§g§lInvisible Beehive Command"]
 kill @e[type=item,name="§g§lMovingBlock BeeNest Command"]
- 
+kill @e[type=item,name="super lag maker"]
+
 #Server Saftey Stats
 execute @e[type=polar:settings,tag=!nbt] ~ ~ ~ scoreboard players add @s safetyscore 4
 tag @e[type=polar:settings] add nbt
